@@ -29,4 +29,12 @@ background-color: aqua;
     width:60%;
     height: 10vh;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.home_btn{
+    width: 19%;
+    height: 10vh;
+    background-color: aquamarine;
 }

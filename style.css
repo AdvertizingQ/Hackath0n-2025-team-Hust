@@ -27,24 +27,6 @@ background-color: rgb(255, 255, 255);
     width: 90%;
     display: flex;
 }
-.content{
-    font-size: 20px;
-    font-weight: 400;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .name{
     width: 30%;
     height: 10vh;
@@ -100,4 +82,43 @@ background-color: rgb(255, 255, 255);
     display : flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+
+.slider{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.body2{
+    width: 100%;
+    background-color: #FEA540;
+}
+.content{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+body3{
+    width: 100%;
 }

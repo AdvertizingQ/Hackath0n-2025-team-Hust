@@ -70,3 +70,28 @@ background-color: aqua;
     height: 10vh;
     background-image: url(images/earth1.png);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.body2{
+    width: 100%;
+    background-color: #FEA540;
+}
+.content{
+    height: 800px;
+    width: 300px;
+    background-color: blue;
+}

@@ -16,11 +16,10 @@ background-color: aqua;
     height: 10vh;
     background-color: red;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 .name{
-    width: 15%;
+    width: 30%;
     height: 10vh;
     display: flex;
     align-items: center;
@@ -30,13 +29,19 @@ background-color: aqua;
     font-family:'Times New Roman', Times, serif;
 }
 .navigation{
-    width:50%;
+    width:60%;
     height: 10vh;
     background-color: black;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+.navBtn{
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
 .helpBtn{
     background-color: #FEA540;
     border-radius: 10px;

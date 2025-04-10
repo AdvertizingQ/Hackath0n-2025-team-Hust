@@ -30,9 +30,10 @@ background-color: aqua;
     font-weight: 600;
     font-size: 40px;
     font-family:'Times New Roman', Times, serif;
+    color: #FEA540;
 }
 .navigation{
-    width:60%;
+    width: 50%;
     height: 10vh;
     display: flex;
     align-items: center;
@@ -47,6 +48,7 @@ background-color: aqua;
 
 .helpBtn{
     background-color: #FEA540;
+    color: #111;
     border-radius: 10px;
     width: 150%;
     height: 10vh;
@@ -55,4 +57,16 @@ background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.otherBtns{
+    width: 20%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.erthBtn{
+    width: 45%;
+    height: 10vh;
+    background-image: url(images/earth1.png);
 }

@@ -74,35 +74,7 @@ background-color: rgb(255, 255, 255);
 .signInBtn{
     width: 50%;
     height: 10vh;
-    background-image: url(images/earth1.png);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.body2{
-    width: 100%;
-    background-color: #FEA540;
-}
-.content{
-    height: 800px;
-    width: 300px;
-    background-color: blue;
-=======
     display : flex;
     justify-content: center;
     align-items: center;
->>>>>>> ae3ec6b9ce021a8246b04e74d85299d02f88ab3c
 }

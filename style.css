@@ -20,8 +20,27 @@ background-color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
+    justify-content: center;
     position: fixed;
 }
+.blokirator{
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .name{
     width: 35%;
     height: 10vh;

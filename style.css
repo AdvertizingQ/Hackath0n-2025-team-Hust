@@ -73,7 +73,7 @@ background-color: rgb(255, 255, 255);
 }
 .signInBtn{
     width: 50%;
-    height: 10vh;
+    height: 11vh;
     display : flex;
     justify-content: center;
     align-items: center;

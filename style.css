@@ -24,7 +24,8 @@ background-color: rgb(255, 255, 255);
     position: fixed;
 }
 .blokirator{
-    width: 80%;
+    width: 90%;
+    display: flex;
 }
 .content{
     font-size: 20px;
@@ -45,18 +46,18 @@ background-color: rgb(255, 255, 255);
 
 
 .name{
-    width: 35%;
+    width: 30%;
     height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-weight: 600;
     font-size: 40px;
-    font-family:'Times New Roman', Times, serif;
+    font-family: "Inter", sans-serif;
     color: #FEA540;
 }
 .navigation{
-    width: 65%;
+    width: 60%;
     height: 10vh;
     display: flex;
     align-items: center;

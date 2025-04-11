@@ -255,6 +255,26 @@ html, body {
   background: #111;
   color: white;
 }
+.like-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px; /* переносимо вгору */
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  z-index: 2;
+}
+
+.heart-icon.liked {
+  fill: #FF7A00;
+  transform: scale(1.2);
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.heart-icon {
+  fill: none;
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
 
 /* ===== АДАПТАЦІЯ ===== */
 @media (max-width: 1024px) {

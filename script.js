@@ -1,5 +1,5 @@
 const users = []; // Array to store user data
-$('#erthBtn').on('click', function () {
+$('#btnSignIn').on('click', function () {
     $('#popup1').css('display', 'flex'); // Show the pop-up
     $('.body-content').addClass('blur');   // Add blur to the background
   });

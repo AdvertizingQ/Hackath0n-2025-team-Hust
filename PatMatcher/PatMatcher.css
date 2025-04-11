@@ -275,7 +275,29 @@ html, body {
   fill: none;
   transition: transform 0.2s ease, fill 0.2s ease;
 }
+.card-bottom {
+  position: relative;
+}
 
+.like-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.like-btn img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.like-btn img.liked {
+  content: url('./Fotos/heart-filled.png'); /* заміни на своє зображення */
+  transform: scale(1.1);
+}
 /* ===== АДАПТАЦІЯ ===== */
 @media (max-width: 1024px) {
   .card-grid {

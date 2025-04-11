@@ -5,36 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adopt Me.</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="PatMatcher.css">
+  <link rel="stylesheet" href="./PatMatcher/PatMatcher.css">
   <script src="PatMarcher.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-  <style>
-    .card-bottom {
-      position: relative;
-    }
-
-    .like-btn {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      cursor: pointer;
-      width: 24px;
-      height: 24px;
-    }
-
-    .like-btn img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.2s ease;
-    }
-
-    .like-btn img.liked {
-      content: url('./Fotos/heart-filled.png'); /* заміни на своє зображення */
-      transform: scale(1.1);
-    }
-  </style>
 </head>
 
 <body>
@@ -44,19 +19,19 @@
       <div class="blokirator">
         <div class="name">Adopt Me.</div>
         <div class="navigation">
-          <a href=""><p class="navBtn">Головна</p></a>
+          <a href="./index.html"><p class="navBtn">Головна</p></a>
           <a href=""><p class="navBtn">Притулок</p></a>
           <a href=""><p class="navBtn">Ветклініка</p></a>
           <a href=""><p class="navBtn">Команда</p></a>
           <a href=""><p class="navBtn">Контакти</p></a>
-          <a href="./Hackath0n-2025-team-Hust/HelpPage/help.html"><p class="helpBtn">Допомогти</p></a>
+          <a href="./help.html"><p class="helpBtn">Допомогти</p></a>
         </div>
         <div class="otherBtns">
           <div class="erthBtn cursor" id="erthBtn">
-            <img src="./Fotos/earth1.png" alt="Зміна мови">
+            <img src="./images/earth1.png" alt="Зміна мови">
           </div>
           <div class="signInBtn cursor">
-            <img src="./Fotos/Group2.png" alt="Профіль користувача">
+            <img src="./images/Group2.png" alt="Профіль користувача">
           </div>
         </div>
       </div>
@@ -172,5 +147,6 @@
       <button>➔</button>
     </div>
   </div>
+  <script src="./PatMatcher/PatMarcher.js"></script>
 </body>
 </html>

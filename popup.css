@@ -1,0 +1,185 @@
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  .popup-content {
+    width: 30%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 3px 1px #9c9c9c;
+    text-align: center;
+    position: relative; /* Для позиціонування кнопки закриття */
+}
+/* Перший рядок */
+.popup-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Другий рядок */
+.popRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.popup-button {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 0px 3px 1px #9c9c9c;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popup-image2 {
+    width: 40%;
+    height: 48%;
+    margin-top: 40px;
+}
+.popup-image1 {
+    width: 76px;
+    height: 127px;
+    margin-top: 40px;
+}
+
+.popup-button p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #FEA540;
+}
+
+/* Третій рядок */
+.popup-footer {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.popup-link-btn1 {
+    width: 170px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: #FEA540;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup-link-btn2 {
+    width: 170px;
+    height: 80px;
+    border-radius: 20px;
+    border:3px solid #FEA540;
+    color: #FEA540;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close-popup-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.blur {
+    filter: blur(5px);
+  }
+  
+.body-content {
+    width: 100%;
+  }
+.bcg-color{
+    background-color: #FEA540;
+}
+.bcg-color2{
+    background-color: #D9D9D9;
+}
+
+
+input {
+    width: 420px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 400;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.phantomInput{
+    width: 420px;
+    height: 70px;
+}
+
+.email-input input:focus {
+    border-color: #000000;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(254, 165, 64, 0.5);
+}
+.registerBtn{
+    width: 432px;
+    height: 70px;
+    background-color: #8D8D8D;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.registerBtn p{
+    font-size: 20px;
+    font-weight: 700;
+}     
+.loginBtn{
+    width: 432px;
+    height: 70px;
+    background-color: #000000;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.otherWays{
+    width: 210px;
+    height: 60px;
+    background-color: #ffffff;
+}

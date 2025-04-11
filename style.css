@@ -22,7 +22,10 @@ background-color: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
     position: fixed;
+    top: 0;
+    z-index: 100;
 }
+
 .blokirator{
     width: 90%;
     display: flex;
@@ -87,23 +90,146 @@ background-color: rgb(255, 255, 255);
 
 
 
-.slider{
-width: 100%;
+/* Слайдер */
+.slider_block {
+    margin-top: 15vh;  /* Відступ, що відповідає висоті шапки */
+  }
+  
+  .slider {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: visible;
+
+  }
+  
+  .slide {
+    height: 600px;
+    display: none;
+    position: relative;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* обрізає зайве, зберігає пропорції */
+    display: block;
+  }
+  
+  .slide-text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: white;
+    max-width: 400px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .slide-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .slide-text .orange {
+    color: #FEA540;
+  }
+  
+  .slide-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .slide-btn {
+    background-color: #FEA540;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .slide-btn:hover {
+    background-color: #FEA540;
+  }
+  
+  /* Стрілки слайдера */
+  .slider-nav .prev,
+  .slider-nav .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    background: #FEA54080;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 28px;
+    z-index: 1;
+  }
+  
+  .slider-nav .prev {
+    left: -60px;
+  }
+  
+  .slider-nav .next {
+    right: -60px;
+  }
+  
+  /* Точки навігації слайдера */
+  .slider-dots {
+    position: absolute; /* Розміщення всередині слайдера */
+    bottom: 10px; /* Відступ від нижнього краю слайдера */
+    left: 50%; /* Центрування по горизонталі */
+    transform: translateX(-50%); /* Вирівнювання по центру */
+    text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  .slider-dots .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+  
+  .slider-dots .dot.active {
+    background-color: #F9A826;
+  }
+  @media (max-width: 1024px) {
+    .slide {
+      height: 400px;
+    }
+  }
+  
+  /* Адаптація для мобільних */
+  @media (max-width: 768px) {
+    .slide {
+      height: 300px;
+    }
+  }
+  
+  /* Дуже маленькі екрани */
+  @media (max-width: 480px) {
+    .slide {
+      height: 220px;
+    }
+  }
 .body2{
     width: 100%;
     background-color: #FEA540;

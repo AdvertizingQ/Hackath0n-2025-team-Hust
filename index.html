@@ -6,6 +6,7 @@
     <title>Adopt Me.</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="slider.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -30,11 +31,68 @@
         </div>
         </div>
 
-        <div class="slider_block">
-            <div class="slider">
-                
+        <!-- Блок-слайдер з відступом зверху, щоб не перекрився шапкою -->
+      <div class="slider_block">
+        <div class="slider">
+          <!-- Перший слайд -->
+          <div class="slide active">
+            <img src="./images/slide1.jpg" alt="Slide 1" />
+            <div class="slide-text">
+              <h2>
+                <span class="orange">Adopt Me.</span><br />Хто ми?
+              </h2>
+              <p>Організація підтримки безпритульних тварин.</p>
+              <button class="slide-btn">Детальніше...</button>
             </div>
+          </div>
+          <!-- Другий слайд -->
+          <div class="slide">
+            <img src="./images/slide2.jpg" alt="Slide 2" />
+            <div class="slide-text">
+              <h2>
+                <span class="orange">Наша клініка</span><br />Турбота, що лікує.
+              </h2>
+              <p>Наша клініка – це місце, де тварини отримують найкращий догляд.</p>
+              <button class="slide-btn">Детальніше...</button>
+            </div>
+          </div>
+          <!-- Третій слайд -->
+          <div class="slide">
+            <img src="./images/slide3.jpg" alt="Slide 3" />
+            <div class="slide-text">
+              <h2>
+                <span class="orange">Наш притулок</span><br />Друга спроба на щасливе життя.
+              </h2>
+              <p>Тимчасовий дім, турбота і шлях до нової родини.</p>
+              <button class="slide-btn">Детальніше...</button>
+            </div>
+          </div>
+          <!-- Четвертий слайд -->
+          <div class="slide">
+            <img src="./images/slide4.jpg" alt="Slide 4" />
+            <div class="slide-text">
+              <h2>
+                <span class="orange">Наша команда</span><br />Об’єднані любов’ю до тварин.
+              </h2>
+              <p>Ми рятуємо, лікуємо й даруємо шанс на краще життя.</p>
+              <button class="slide-btn">Детальніше...</button>
+            </div>
+          </div>
+          <!-- Стрілки навігації слайдера -->
+          <div class="slider-nav">
+            <div class="prev">&#10094;</div>
+            <div class="next">&#10095;</div>
+          </div>
+          <!-- Точки навігації слайдера -->
+          <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
         </div>
+      </div>
+    </div>
 
     </div>
     <div class="body2">

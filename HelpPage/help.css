@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -91,12 +92,12 @@ background-color: rgb(255, 255, 255);
     width: 90%; /* Зменшення ширини для відступів */
     margin: 0 auto; /* Центрування по горизонталі */
     height: calc(100vh - 25vh); /* Висота екрану мінус висота хедера */
-    padding-top: 25vh; /* Відступ для фіксованого хедера */
+    padding-top: 40vh; /* Відступ для фіксованого хедера */
     background-color: #fff;
 }
 
 .cat-image {
-    width: 25.5%; /* Ширина секції з котом */
+    width: 25.75%; /* Ширина секції з котом */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,7 +179,7 @@ background-color: rgb(255, 255, 255);
         text-align: center;
     }
 
-    .menu-toggle.active + .navigation {
+.menu-toggle.active + .navigation {
         display: flex; /* Відображаємо меню при натисканні */
         flex-direction: column;
         gap: 10px;

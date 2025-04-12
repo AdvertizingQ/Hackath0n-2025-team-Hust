@@ -53,4 +53,4 @@ function closePopup() {
     $('.popup-content').removeClass('bcg-color');
     $('.popup-content').removeClass('bcg-color2');
 };
-console.log(users);
+

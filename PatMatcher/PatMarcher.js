@@ -282,3 +282,7 @@ $(document).ready(function () {
     // Ініціалізація
     initPagination();
 });
+$('#search-pet-btn').on("click", function(){
+    $('#search-pet-input').val('');
+    alert('Функція пошуку поки що не реалізована!');
+});

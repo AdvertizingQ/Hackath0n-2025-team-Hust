@@ -42,7 +42,7 @@ $('#btnSignIn').on('click', function () {
   const user = users.find(user => user.email === email && user.password === password);
   if (user) {
   closePopup();
-  alert("Ласкаво просимо, ${user.name}!");
+  alert(`Ласкаво просимо, ${user.name} !`);
   } else {
   alert('Неправильний логін або пароль!');
   }

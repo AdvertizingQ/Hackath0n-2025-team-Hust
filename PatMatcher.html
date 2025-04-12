@@ -112,14 +112,44 @@
       <!-- Фільтри -->
       <section class="filters-container">
         <div class="filters-row">
-          <select><option>Вид</option></select>
-          <select><option>Стать</option></select>
-          <select><option>Розмір</option></select>
-          <select><option>Стерилізація</option></select>
-          <select><option>Вік</option></select>
+          <select>
+            <option value="default">Вид</option>
+            <option value="cat">Кіт</option>
+            <option value="dog">Собака</option>
+            <option value="hamster">Хом'як</option>
+            <option value="parrot">Папуга</option>
+            <option value="other">Інші</option>       
+          </select>
+          <select>
+            <option value="default">Стать</option>
+            <option value="male">Хлопчик</option>
+            <option value="female">Дівчинка</option>
+          </select>
+          <select>
+            <option value="default">Розмір</option>
+            <option value="small">Маленький</option>
+            <option value="medium">Середній</option>
+            <option value="large">Великий</option>
+          </select>
+          <select>
+            <option value="default">Стерилізація</option>
+            <option value="yes">Так</option>
+            <option value="no">Ні</option>
+          </select>
+          <select>
+            <option value="default">Вік</option>
+            <option value="0">До 1 року</option>
+            <option value="1">1-2 роки</option>
+            <option value="2">2-3 років</option>
+            <option value="3">3-4 років</option>
+            <option value="4">4-5 років</option>
+            <option value="5">5-6 років</option>
+            <option value="6">6 і більше років</option>
+          </select>
         </div>
         <div class="filters-row">
-          <input type="text" placeholder="Пошук улюбленця" />
+          <input type="text" placeholder="Пошук улюбленця" id="search-pet-input" />
+          <button class="search-btn" id="search-pet-btn">Знайти улюбленця</button>
           <button class="create-btn">Створити оголошення</button>
         </div>
       </section>

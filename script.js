@@ -1,5 +1,24 @@
-const users = []; // Array to store user data
+const users = [
+  {
+    name: "Іван",
+    email: "example@gmail.com",
+    password: "123456",
+    selector: "Волонтер"
+},
+{
+    name: "#Save_animals",
+    email: "example@gmail.com",
+    password: "password",
+    selector: "Притулок"
+}
+]; // Array to store user data
+function populateProfileInfo(user) {
+  if (!user) return;
 
+  // Заповнюємо ім'я та селектор
+  $('.user-name').text(user.name); // Ім'я користувача
+  $('.user-selector').text(user.selector); // Волонтер або Притулок
+}
 $('#btnSignIn').on('click', function () {
   $('#popup1').css('display', 'flex'); // Show the pop-up
   $('.body-content').addClass('blur'); // Add blur to the background
@@ -44,11 +63,13 @@ $('#loginBtn').on('click', function () {
   const email = $('#email2').val();
   const password = $('#password2').val();
   const user = users.find(user => user.email === email && user.password === password);
+
   if (user) {
-    closePopup();
-    alert(`Ласкаво просимо, ${user.name} !`);
+      closePopup(); // Закриваємо попап
+      alert(`Ласкаво просимо, ${user.name}!`);
+      populateProfileInfo(user); // Заповнюємо інформацію в кабінеті
   } else {
-    alert('Неправильний логін або пароль!');
+      alert('Неправильний логін або пароль!');
   }
 });
 
@@ -84,6 +105,13 @@ $(".register_btn").on("click", function () {
   $('body').addClass('no-scroll'); // Забороняємо прокрутку
   $('.body-content').addClass('blur'); // Додаємо ефект розмиття
 });
+$("#create-announcment-btn").on("click", function () {
+  $("#popup5").css("display", "flex"); // Показуємо popup5
+  $(".popup-content").addClass("bcg-color"); // Додаємо клас для стилізації
+  $('body').addClass('no-scroll'); // Забороняємо прокрутку
+  $('.body-content').addClass('blur'); // Додаємо ефект розмиття
+
+});
 $("#burgerMenu").on("click", function () {
   $("#mobileMenu").toggleClass("active"); // Перемикаємо клас "active" для мобільного меню
   $("body").toggleClass("no-scroll"); // Забороняємо або дозволяємо прокрутку
@@ -99,3 +127,20 @@ $("#mobileAuthBtn").on("click", function () {
 $("#mobileLanguageBtn").on("click", function () {
   alert("Функція зміни мови поки що не реалізована!");
 });
+$("#sendBtn").on("click", function () {
+  $("#popup5").css("display", "none"); // Ховаємо popup5
+  $(".popup-content").removeClass("bcg-color"); // Видаляємо клас для стилізації
+  $("#name3").val(""); // Очищаємо поле вводу
+  $("#email3").val(""); // Очищаємо поле вводу
+  $("#phoneNumber").val(''); // Очищаємо поле вводу
+  $("#message").val(""); // Очищаємо поле вводу
+  $('body').removeClass('no-scroll'); // Дозволяємо прокрутку
+  $('.body-content').removeClass('blur'); // Знімаємо ефект розмиття
+});
+$('#ask-for-pet-btn').on('click', function () {
+  $('#popup5').css('display', 'flex'); // Показуємо попап
+  $('.body-content').addClass('blur'); // Додаємо ефект розмиття
+  $('body').addClass('no-scroll'); // Забороняємо прокрутку
+  $('.popup-content').addClass('bcg-color'); // Додаємо клас для стилізації
+});
+

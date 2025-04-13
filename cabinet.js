@@ -1,19 +1,3 @@
-// Зберігаємо likedIds у localStorage
-function toggleLike(element) {
-    const heart = element.querySelector('svg');
-    heart.classList.toggle('liked');
-
-    const animalId = parseInt(element.closest('.card').querySelector('.details-btn').dataset.id);
-    let likedIds = JSON.parse(localStorage.getItem('likedIds')) || [];
-
-    if (likedIds.includes(animalId)) {
-        likedIds = likedIds.filter((id) => id !== animalId); // Видаляємо ID, якщо вже є
-    } else {
-        likedIds.push(animalId); // Додаємо ID
-    }
-
-    localStorage.setItem('likedIds', JSON.stringify(likedIds)); // Зберігаємо в localStorage
-}
 const animals = [
     {
         name: "Іскорка",
@@ -214,22 +198,24 @@ const animals = [
         image: "./PatMatcher/petImages/plombir.jpg"
     }
 ];
-
 $(document).ready(function () {
-    const cardsPerPage = 6; // Кількість карток на сторінку
-    const totalPages = 3; // Загальна кількість сторінок
-    let currentPage = 1; // Поточна сторінка
+    const cardsPerPage = 4; // Кількість карток на слайд
 
-    // Функція для рендерингу карток
-    function renderCards(page) {
-        const startIndex = (page - 1) * cardsPerPage;
-        const endIndex = startIndex + cardsPerPage;
-        const cardsToShow = animals.slice(startIndex, endIndex);
-    
-        $(".card-grid").empty(); // Очищаємо контейнер карток
-    
-        cardsToShow.forEach((animal) => {
-            $(".card-grid").append(`
+    // ============================
+    // Слайдер "Ваші оголошення"
+    // ============================
+    let currentPageAnnouncements = 1;
+
+    function renderAnnouncements() {
+        const cardGrid = $(".first-slider-row .card-grid");
+        cardGrid.empty();
+
+        const startIndex = (currentPageAnnouncements - 1) * cardsPerPage;
+        const endIndex = Math.min(startIndex + cardsPerPage, animals.length);
+
+        for (let i = startIndex; i < endIndex; i++) {
+            const animal = animals[i];
+            const card = `
                 <div class="card">
                     <div class="card-top">
                         <img src="${animal.image}" alt="${animal.name}" style="width: 100%; height: auto; border-radius: 10px;">
@@ -237,69 +223,95 @@ $(document).ready(function () {
                     <div class="card-bottom">
                         <h3>${animal.name}</h3>
                         <p>${animal.gender} | <span>${animal.age}</span></p>
-                        <button class="details-btn" data-id="${animal.id}">Більше...</button>
-                        <div class="like-btn" onclick="toggleLike(this)">
-                            <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#FF7A00" stroke-width="2" viewBox="0 0 24 24">
-                                <path d="M12 21s-6.5-4.58-10-9.33C.9 8.07 2.85 4.5 6 4.5c1.91 0 3.64 1.17 4.5 2.89C11.86 5.67 13.59 4.5 15.5 4.5c3.15 0 5.1 3.57 4 7.17C18.5 16.42 12 21 12 21z"/>
-                            </svg>
-                        </div>
+                        <button class="details-btn">Більше...</button>
                     </div>
                 </div>
-            `);
-        });
-    }
-
-    // Функція для оновлення стану пагінації
-    function updatePagination() {
-        $(".page-btn").removeClass("active");
-        $(`.page-btn[data-page="${currentPage}"]`).addClass("active");
-
-        // Деактивація кнопки "Далі" на останній сторінці
-        if (currentPage === totalPages) {
-            $(".next-btn").prop("disabled", true);
-        } else {
-            $(".next-btn").prop("disabled", false);
+            `;
+            cardGrid.append(card);
         }
     }
 
-    // Функція для скролу вгору
-    function scrollToTop() {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+    function updatePaginationAnnouncements() {
+        $(".first-slider-row .page-btn").removeClass("active");
+        $(`.first-slider-row .page-btn[data-page=${currentPageAnnouncements}]`).addClass("active");
     }
 
-    // Ініціалізація
-    function initPagination() {
-        renderCards(currentPage);
-        updatePagination();
-    }
-
-    // Обробник кліку на кнопки сторінок
-    $(".pagination").on("click", ".page-btn", function () {
-        currentPage = parseInt($(this).data("page"));
-        renderCards(currentPage);
-        updatePagination();
-        scrollToTop(); // Додаємо скрол вгору
-    });
-
-    // Обробник кліку на кнопку "Далі"
-    $(".pagination").on("click", ".next-btn", function () {
-        if (currentPage < totalPages) {
-            currentPage++;
-            renderCards(currentPage);
-            updatePagination();
-            scrollToTop(); // Додаємо скрол вгору
+    $(".first-slider-row .pagination").on("click", "button", function () {
+        if ($(this).hasClass("page-btn")) {
+            currentPageAnnouncements = parseInt($(this).data("page"));
+        } else if ($(this).hasClass("prev-btn") && currentPageAnnouncements > 1) {
+            currentPageAnnouncements--;
+        } else if ($(this).hasClass("next-btn") && currentPageAnnouncements * cardsPerPage < animals.length) {
+            currentPageAnnouncements++;
         }
+        renderAnnouncements();
+        updatePaginationAnnouncements();
     });
 
-    // Ініціалізація
-    initPagination();
-});
-$(".card-grid").on("click", ".details-btn", function () {
-    const animalId = $(this).data("id"); // Отримуємо ID тварини
-    window.location.href = `details.html?id=${animalId}`; // Перенаправляємо на сторінку details.html
-});
-$('#search-pet-btn').on("click", function(){
-    $('#search-pet-input').val('');
-    alert('Функція пошуку поки що не реалізована!');
+    // Ініціалізація "Ваші оголошення"
+    renderAnnouncements();
+    updatePaginationAnnouncements();
 
+    // ============================
+    // Слайдер "Ваші уподобання"
+    // ============================
+    let currentPageLikes = 1;
+
+    // Отримуємо likedIds із localStorage
+    const likedIds = JSON.parse(localStorage.getItem('likedIds')) || [];
+
+    // Фільтруємо тварин за likedIds
+    const likedAnimals = animals.filter((animal) => likedIds.includes(animal.id));
+
+    function renderLikedCards() {
+        const cardGrid = $(".second-slider-row .card-grid");
+        cardGrid.empty();
+
+        const startIndex = (currentPageLikes - 1) * cardsPerPage;
+        const endIndex = Math.min(startIndex + cardsPerPage, likedAnimals.length);
+
+        for (let i = startIndex; i < endIndex; i++) {
+            const animal = likedAnimals[i];
+            const card = `
+                <div class="card">
+                    <div class="card-top">
+                        <img src="${animal.image}" alt="${animal.name}" style="width: 100%; height: auto; border-radius: 10px;">
+                    </div>
+                    <div class="card-bottom">
+                        <h3>${animal.name}</h3>
+                        <p>${animal.gender} | <span>${animal.age}</span></p>
+                        <button class="details-btn">Більше...</button>
+                    </div>
+                </div>
+            `;
+            cardGrid.append(card);
+        }
+    }
+
+    function updatePaginationLikes() {
+        $(".second-slider-row .page-btn").removeClass("active");
+        $(`.second-slider-row .page-btn[data-page=${currentPageLikes}]`).addClass("active");
+    }
+
+    $(".second-slider-row .pagination").on("click", "button", function () {
+        if ($(this).hasClass("page-btn")) {
+            currentPageLikes = parseInt($(this).data("page"));
+        } else if ($(this).hasClass("prev-btn") && currentPageLikes > 1) {
+            currentPageLikes--;
+        } else if ($(this).hasClass("next-btn") && currentPageLikes * cardsPerPage < likedAnimals.length) {
+            currentPageLikes++;
+        }
+        renderLikedCards();
+        updatePaginationLikes();
+    });
+
+    // Ініціалізація "Ваші уподобання"
+    renderLikedCards();
+    updatePaginationLikes();
 });
+$('#create-announcment-btn').on("click", function () {
+    $("#poppup5").css("display", "flex"); // Показуємо попап для створення оголошення
+    $(".popup-content").addClass("bcg-color"); // Додаємо клас для стилізації
+    $("body").addClass("no-scroll"); // Забороняємо прокрутку
+    $(".body-content").addClass("blur"); // Додаємо ефект розмиття
+  });

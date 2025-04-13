@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="popup.css">
     <link rel="stylesheet" href="news-slider.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
@@ -97,13 +101,6 @@
 
 
 
-
-
-
-
-
-
-
   <div class="body-content">
     
     
@@ -153,7 +150,7 @@
               <span class="orange">Adopt Me.</span><br />Хто ми?
             </h2>
             <p>Організація підтримки безпритульних тварин.</p>
-            <button class="slide-btn">Детальніше...</button>
+            <a href="#about-us"><button class="slide-btn">Детальніше...</button></a>
           </div>
         </div>
         <!-- Другий слайд -->
@@ -164,7 +161,7 @@
               <span class="orange">Ветклініка</span><br />Турбота, що лікує.
             </h2>
             <p>Наша клініка – це місце, де тварини отримують найкращий догляд.</p>
-            <button class="slide-btn">Детальніше...</button>
+            <a href="#vetclinika"><button class="slide-btn">Детальніше...</button></a>
           </div>
         </div>
         <!-- Третій слайд -->
@@ -175,7 +172,7 @@
               <span class="orange">Притулки для тварин</span><br />Друга спроба на щасливе життя.
             </h2>
             <p>Тимчасовий дім, турбота і шлях до нової родини.</p>
-            <button class="slide-btn">Детальніше...</button>
+            <a href="./PatMatcher.html"><button class="slide-btn">Детальніше...</button></a>
           </div>
         </div>
         <!-- Четвертий слайд -->
@@ -186,7 +183,7 @@
               <span class="orange">AdoptMe.</span><br />Об’єднані любов’ю до тварин.
             </h2>
             <p>Ми рятуємо, лікуємо й даруємо шанс на краще життя.</p>
-            <button class="slide-btn">Детальніше...</button>
+            <a href="#news"><button class="slide-btn">Детальніше...</button></a>
           </div>
         </div>
         <!-- Стрілки навігації слайдера -->
@@ -206,7 +203,7 @@
     </div>
   </div>
   <!-- Новий блок про нас -->
-<div class="about-us">
+<div id = "about-us" class="about-us">
   <h2><span class="black">Про</span> <span class="orange">нас</span></h2>
   <div class="about-us-content" id = "section1">
     <div class="about-text">
@@ -225,7 +222,7 @@
 </div>
 
 
-        <div class="vetclinika">
+        <div id ="vetclinika" class="vetclinika">
           <h1 class="main-title">
             Ветклініка <span>Doctor Vet</span>
           </h1>
@@ -246,7 +243,7 @@
                   залишатися здоровими й <br>
                   щасливими.
                 </p>
-                <button>Детальніше</button>
+                <a href="./vetKlinika.html"><button>Детальніше</button></a>
               </div>
             </div>
             <div class="clinic-right">
@@ -256,7 +253,7 @@
         </div>
 
 
-        <div class="news-slider-section">
+        <div id="news" class="news-slider-section">
           <h1 class="title">Новини <span>AdoptMe.</span></h1>
            <div class="news-slider">
             <!-- Один слайд -->
@@ -347,5 +344,6 @@
     <script src="news-slider.js"></script>
     <script src="script.js"></script>
     <script src="script2.js"></script>
+    
 </body>
 </html>

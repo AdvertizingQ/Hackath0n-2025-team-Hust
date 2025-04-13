@@ -54,3 +54,15 @@ $('#btnSignIn').on('click', function () {
   $('.popup-content').removeClass('bcg-color');
   $('.popup-content').removeClass('bcg-color2');
   };
+  $(".Btn_Adopt").on("click", function () {
+    $("#popup4").css("display", "flex"); // Показуємо popup4
+    $(".popup-content").addClass("bcg-color2"); // Додаємо клас для стилізації
+});
+$(".AdoptInfoBtn").on("click", function () {
+    $("#popup4").css("display", "none"); // Ховаємо popup4
+    $(".popup-content").removeClass("bcg-color2"); // Видаляємо клас для стилізації
+    $("#name3").val(""); // Очищаємо поле вводу
+    $("#email3").val(""); // Очищаємо поле вводу
+    $("#phoneNumber").val(''); // Очищаємо поле вводу
+    $("#message").val(""); // Очищаємо поле вводу
+});

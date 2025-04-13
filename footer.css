@@ -81,3 +81,15 @@ body {
 .footer-contact a:hover {
     text-decoration: underline;
 }
+
+@media(max-width: 800px){
+    .footer-links{
+        justify-content: center;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 60px;
+    }
+    .adapt{
+        margin: 0px 0px 30px 0px;
+    }
+}

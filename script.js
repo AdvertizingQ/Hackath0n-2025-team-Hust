@@ -64,6 +64,7 @@ $(".Btn_Adopt").on("click", function () {
   $("#popup4").css("display", "flex"); // Показуємо popup4
   $(".popup-content").addClass("bcg-color2"); // Додаємо клас для стилізації
   $('body').addClass('no-scroll'); // Забороняємо прокрутку
+  $('.body-content').addClass('blur'); // Додаємо ефект розмиття
 });
 
 $(".AdoptInfoBtn").on("click", function () {
@@ -74,10 +75,12 @@ $(".AdoptInfoBtn").on("click", function () {
   $("#phoneNumber").val(''); // Очищаємо поле вводу
   $("#message").val(""); // Очищаємо поле вводу
   $('body').removeClass('no-scroll'); // Дозволяємо прокрутку
+  $('.body-content').removeClass('blur'); // Знімаємо ефект розмиття
 });
 
 $(".register_btn").on("click", function () {
   $("#popup4").css("display", "flex"); // Показуємо popup4
   $(".popup-content").addClass("bcg-color2"); // Додаємо клас для стилізації
   $('body').addClass('no-scroll'); // Забороняємо прокрутку
+  $('.body-content').addClass('blur'); // Додаємо ефект розмиття
 });

@@ -309,6 +309,12 @@ $(document).ready(function () {
     renderLikedCards();
     updatePaginationLikes();
 });
+$('#create-announcment-btn').on("click", function () {
+    $("#poppup5").css("display", "flex"); // Показуємо попап для створення оголошення
+    $(".popup-content").addClass("bcg-color"); // Додаємо клас для стилізації
+    $("body").addClass("no-scroll"); // Забороняємо прокрутку
+    $(".body-content").addClass("blur"); // Додаємо ефект розмиття
+  });
 $(document).ready(function () {
     // Отримуємо інформацію про авторизованого користувача
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));

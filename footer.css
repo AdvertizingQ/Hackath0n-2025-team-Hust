@@ -1,88 +1,75 @@
-/* Загальний стиль для сторінки */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Мінімальна висота сторінки дорівнює висоті вікна */
-    margin: 0; /* Відсутність зовнішніх відступів */
-}  
-
-.body1 {
-    flex: 1; /* Контент займає весь доступний простір між хедером і футером */
-    padding-bottom: 100px; /* Додаємо відступ, щоб контент не накладався на футер */
-}
-
-/* Стиль для футера */
 .footer {
     background-color: #FEA540;
     color: #fff;
     padding: 20px 10px;
     text-align: center;
-    font-family: 'Inter', sans-serif;
-    margin-top: auto; /* Футер завжди внизу сторінки */
-}
-.footer-main {
+    font-family: "Inter", sans-serif;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .footer-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 115px;
-    margin-bottom: 60px;
+    gap: 15px;
 }
 
 .footer-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 25px;
-    font-weight: 400;
-    transition: all ease-in 1s;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
-
-
 
 .footer-links a:hover {
-    text-decoration: underline;
+    color: #333;
 }
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
 
 .footer-social {
     background-color: #fff;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 20px 20px;
     display: flex;
-    justify-content: center;
-}
-.alt{
-    width: 30px;
-    margin: 0 15px 0 0;
-}
-.alt1{
-    width: 40px;
-    margin: 0 10px 0 0;
-}
-.footer-social a img {
-    border-radius: 5px; /* Залишаємо округлення */
-    object-fit: cover; /* Забезпечує однаковий вигляд для всіх зображень */
-     
+    gap: 15px;
+    border-radius: 5px;
 }
 
-.footer-contact p {
-    margin: 5px 0;
-    font-size: 14px;
-    text-align: end;
+.footer-social a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.1);
+}
+
+.footer-contact {
+    text-align: center;
+    font-size: 0.9rem;
 }
 
 .footer-contact a {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .footer-contact a:hover {
-    text-decoration: underline;
+    color: #333;
 }
 
 @media(max-width: 800px){

@@ -7,9 +7,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="vet.css">
+    <link rel="stylesheet" href="aboutus.css">
     <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="news-slider.css">
     <script src="slider.js"></script>
+    <script src="news-slider.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -167,28 +171,131 @@
       </div>
     </div>
   </div>
-  <div class="vet-title">
-    <h2>Ветклініка <span class="highlight">Doctor Vet</span></h2>
-  </div>
-  <div class="body2">
-    <div class="vet-section">
-      <div class="vet-info">
-        <p class="vet-intro">Наша компанія активно співпрацює з найбільшою ветклінікою України – Doctor Vet!</p>
-        <div class="vet-description">
-          <h3>Про Doctor Vet</h3>
-          <p>Ми — команда досвідчених ветеринарів, які понад 10 років допомагають пухнастим, хвостатим і пернатим пацієнтам залишатися здоровими й щасливими.</p>
-          <button class="details-btn">Детальніше</button>
-        </div>
-      </div>
-      <div class="vet-image">
-        <img src="./images/vetclinic.jpg" alt="Doctor Vet">
-      </div>
+  <!-- Новий блок про нас -->
+<div class="about-us">
+  <h2><span class="black">Про</span> <span class="orange">нас</span></h2>
+  <div class="about-us-content">
+    <div class="about-text">
+      <h1>AdoptMe.</h1>
+      <p>
+        AdoptMe. — платформа для розміщення та поширення інформації про тварин, які залишились без нагляду. 
+        Це універсальна платформа, де кожен зможе зробити свій внесок у порятунок безпритульних тварин — 
+        передати знайдену тварину до притулку або взяти звідти нового улюбленця.
+      </p>
+      <button class="team-btn">Команда розробників</button>
+    </div>
+    <div class="about-image">
+      <img src="./images/about-us.jpg" alt="Про нас">
     </div>
   </div>
-    
+</div>
 
+<h1 class="main-title">
+  Ветклініка <span>Doctor Vet</span>
+</h1>
 
-
+<div class="clinic-wrapper">
+  <div class="clinic-left">
+    <div class="clinic-top">
+      <p>Наша компанія активно</p> <p>співпрацює з найбільшою</p>ветклінікою України – Doctor Vet!
+    </div>
+    <div class="clinic-bottom">
+      <h1>Про Doctor Vet</h1> <br>
+      <p>
+        Ми — команда досвідчених<br>
+        ветеринарів, які понад 10 <br>
+        років допомагають <br>
+        пухнастим, хвостатим і <br>
+        пернатим пацієнтам <br>
+        залишатися здоровими й <br>
+        щасливими.
+      </p>
+      <button>Детальніше</button>
+    </div>
+  </div>
+  <div class="clinic-right">
+    <img src="./images/VetClinic.jpg" alt="Doctor Vet">
+  </div>
+</div>
+<div class="news-slider-section">
+  <h1 class="title">Новини <span>AdoptMe.</span></h1>
+   <div class="news-slider">
+    <!-- Один слайд -->
+    <div class="news-slide active">
+      <div class="news-slide-content">
+        <img src="./images/news1.jpg" alt="news image" class="news-img" />
+        <div class="news-text">
+          <p class="news-date">10 квітня 2025</p>
+          <h2>Знайшовся дім для Рекса!</h2>
+          <p>
+            Пам’ятаєте Рекса — великого песика, якого ми підібрали з пораненою лапою? Сьогодні він уже вдома! Його нові господарі — молода пара з Ірпеня, яка побачила його на нашому сайті й одразу приїхала знайомитися. Тепер у Рекса є великий двір, тепла лежанка й навіть новий друг — кіт Барсик. Бажаємо йому щасливого життя!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="news-slide">
+      <div class="news-slide-content">
+        <img src="./images/news2.jpg" alt="news image" class="news-img" />
+        <div class="news-text">
+          <p class="news-date">4 квітня 2025</p>
+          <h2>Ветогляд для всіх!</h2>
+          <p>
+            Минулого тижня в притулку відбувся плановий медогляд. Завдяки співпраці з клінікою “Doctor Vet” всі наші улюбленці пройшли огляд, вакцинацію та отримали необхідне лікування. Особлива подяка волонтерам, які допомагали з транспортуванням та доглядом за тваринами!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="news-slide">
+      <div class="news-slide-content">
+        <img src="./images/news3.jpg" alt="news image" class="news-img" />
+        <div class="news-text">
+          <p class="news-date">1 квітня 2025</p>
+          <h2>Зона радості</h2>
+          <p>
+            Завдяки пожертвам небайдужих ми облаштували нову ігрову зону для собак. Тепер вони можуть бігати, стрибати й тренуватися на спеціальних конструкціях. Це не тільки весело, а й дуже корисно для їхнього емоційного та фізичного стану.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="news-slide">
+      <div class="news-slide-content">
+        <img src="./images/news4.jpg" alt="news image" class="news-img" />
+        <div class="news-text">
+          <p class="news-date">28 березня 2025</p>
+          <h2>Мурчик поїхав додому</h2>
+          <p>
+            Наш кіт Мурчик, якого ми знайшли ще кошеням біля вокзалу, нарешті знайшов свій дім! Його обрала родина з двома дітьми, які обожнюють тварин. Кажуть, Мурчик вже спить у ліжку з малечею і навіть має власну подушку!
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Додай більше слайдів за потреби -->
+    <!-- ... -->
+    <div class="news-arrow left">&#10094;</div>
+    <div class="news-arrow right">&#10095;</div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-links">
+      <a href="./index.html">Головна</a>
+      <a href="#">Ветклініка</a>
+      <a href="#">Особистий кабінет</a>
+      <a href="#">Оголошення</a>
+  </div>
+  <div class="footer-main">
+  <div class="footer-social">
+      <a href="#"><img class="alt1" src="./images/google-icon.png" alt="Google"></a>
+      <a href="#"><img class="alt" src="./images/instagram-icon.png" alt="Instagram"></a>
+      <a href="#"><img class="alt" src="./images/facebook-icon.png" alt="Facebook"></a>
+  </div>
+  <div class="footer-contact">
+      <p>Контакти:</p>
+      <p>+380 85 349 54 32</p>
+      <p><a href="mailto:mariapelipek@gmail.com">mariapelipek@gmail.com</a></p>
+  </div>
+</div>
+</footer>
+<script src="script.js"></script>
 
 
     <script src="script.js"></script>

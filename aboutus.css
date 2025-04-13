@@ -1,0 +1,95 @@
+/* Styles for the "Про нас" section */
+.about-us {
+    padding-top: 22px;
+    padding: 100px;
+    background-color: #fff; /* Світлий фон для секції */
+    text-align: center;
+    gap : 0px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .about-us h2 {
+    font-size: 2.5rem;
+    color: #333; /* Темний текст */
+    margin-bottom: 50px;
+    margin-top: -60px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .about-us-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .about-text {
+    background-color: #FEA540CC; /* Оранжевий фон */
+    padding: 20px;
+    color: #fff; /* Білий текст */
+    width: 440px; /* Фіксована ширина */
+    height: 445px; /* Фіксована висота */
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легка тінь */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Розподіл контенту всередині */
+    /*margin-right: 123px; /* Відступ вправо для зсуву вліво */
+    font-family: "Inter", sans-serif;
+  }
+  .about-text h1 {
+    font-size: 3rem;
+    margin-top: 15px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .team-btn {
+    height: 60px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FEA540; /* Оранжевий текст */
+    background-color: #fff; /* Білий фон */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .team-btn:hover {
+    background-color: #e5673e;
+    color: #fff;
+  }
+  
+  .about-image {
+    padding-top: 5px;
+    max-width: 1000px;
+    flex-shrink: 0;
+  }
+  
+  .about-image img {
+    height: auto;
+    max-width: 665px; /* Максимальна ширина зображення */
+    max-height: 550px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легка тінь */
+    object-fit: cover;
+  }
+  
+.black {
+    color: #333; /* Чорний колір */
+  }
+  
+  /* Стиль для оранжевого тексту */
+  .orange {
+    color: #FEA540; /* Оранжевий колір */
+  }

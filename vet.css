@@ -1,117 +1,121 @@
-.body2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0; /* Відступи зверху і знизу */
-    background-color: #fff; /* Білий фон для секції */
+body {
+    margin: 0;
+    padding: 0;
     font-family: "Inter", sans-serif;
-}
-.vet-title {
-    text-align: center; /* Центрує текст */
-    margin: 50px 0; /* Відступи зверху і знизу */
-    font-family: "Inter", sans-serif; /* Шрифт */
-}
-
-.vet-title h2 {
-    font-size: 32px; /* Розмір заголовка */
-    color: #111; /* Основний колір тексту */
-}
-
-.vet-title .highlight {
-    color: #ff6600; /* Виділення кольором */
-}
-.vet-section {
+    background-color: #fff;
+  }
+  
+  .main-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    color: #000;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .main-title span {
+    color: #ff9900;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .clinic-wrapper {
     display: flex;
-    max-width: 1200px;
-    gap: 20px;
-    background-color: #FFE5CC; /* Оранжевий фон для блоку */
-    border-radius: 10px; /* Закруглені кути */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для блоку */
-    overflow: hidden; /* Забезпечує акуратність країв */
-}
-.vet-intro {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 20px;
-    color: #111;
-}
-.vet-info {
+    max-width: 1110px;
+    height: 445px;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .clinic-left {
+    height: 100%;
+    flex:1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .clinic-top {
+    flex: 0 0 auto;
+    background-color: #ffb366;
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .clinic-bottom {
+    background-color: #ffcc99;
+    color: white;
+    padding: 20px 25px;
     flex: 1;
-    padding: 30px;
-    background-color: #FFE5CC; /* Оранжевий фон для текстового блоку */
-}
-.vet-info h2 {
-    font-size: 28px; /* Розмір заголовка */
-    margin-bottom: 10px; /* Відступ знизу */
-    color: #111; /* Колір тексту */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-family: "Inter", sans-serif;
-}
-
-.vet-info .highlight {
-    color: #ff6600; /* Виділення кольором */
+  }
+  
+  .clinic-bottom h2 {
+    color: white;
+    font-size: 26px;
+    margin: 0 0 20px;
+    font-weight: bold;
     font-family: "Inter", sans-serif;
-}
-
-.vet-info p {
-    font-size: 18px; /* Розмір тексту */
-    margin-bottom: 20px; /* Відступ між абзацами */
-    font-family: "Inter", sans-serif;
-}
-
-.vet-description h3 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #111;
-}
-
-.vet-description p {
+  }
+  
+  .clinic-bottom p {
     font-size: 16px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.details-btn {
-    background-color: #FF6600;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .clinic-bottom button {
+    background-color: white;
+    color: #FEA540;
+    padding: 12px 25px;
     border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-
-.details-btn:hover {
-    background-color: #E65500;
-}
-
-.vet-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFE5CC; /* Оранжевий фон для блоку зображення */
-}
-
-.vet-image img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-@media (max-width: 768px) {
-    .vet-section {
-        flex-direction: column; /* Вертикальне розташування для мобільних */
-        align-items: center;
+    align-self: start;
+    transition: background-color 0.3s ease;
+    font-family: "Inter", sans-serif;
+  }
+  .clinic-bottom button:hover {
+    background-color: #e5673e;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .clinic-right {
+    flex: 2;
+    width: 50%;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .clinic-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    font-family: "Inter", sans-serif;
+  }
+  
+  /* Адаптивність */
+  @media (max-width: 768px) {
+    .clinic-wrapper {
+      flex-direction: column;
     }
-
-    .vet-info, .vet-image {
-        flex: none;
-        width: 100%; /* Блоки займають всю ширину */
+  
+    .clinic-left,
+    .clinic-right {
+      width: 100%;
     }
-
-    .vet-info {
-        margin-bottom: 20px; /* Відступ між текстом і зображенням */
+  
+    .clinic-bottom button {
+      align-self: center;
     }
-}
+  }

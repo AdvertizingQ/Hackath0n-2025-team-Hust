@@ -84,3 +84,18 @@ $(".register_btn").on("click", function () {
   $('body').addClass('no-scroll'); // Забороняємо прокрутку
   $('.body-content').addClass('blur'); // Додаємо ефект розмиття
 });
+$("#burgerMenu").on("click", function () {
+  $("#mobileMenu").toggleClass("active"); // Перемикаємо клас "active" для мобільного меню
+  $("body").toggleClass("no-scroll"); // Забороняємо або дозволяємо прокрутку
+});
+// Відкрити попап для реєстрації/входу
+$("#mobileAuthBtn").on("click", function () {
+  $("#popup1").css("display", "flex"); // Показуємо попап реєстрації/входу
+  $("body").addClass("no-scroll"); // Забороняємо прокрутку
+  $("#mobileMenu").removeClass("active"); // Закриваємо мобільне меню
+});
+
+// Змінити мову
+$("#mobileLanguageBtn").on("click", function () {
+  alert("Функція зміни мови поки що не реалізована!");
+});

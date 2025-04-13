@@ -1,3 +1,6 @@
+.AnounsHeadTxt{
+    color: #FEA540;
+}
 .phantom-header{
     width: 100%;
     height: 15vh;
@@ -5,26 +8,254 @@
 .cabinet{
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .cabinet-header-row{
     width: 100%;
     height: 40vh;
-    background-color:aqua ;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .cabinet-blockirator{
-    width: 80%;
+    width: 85%;
     height: 100%;
     display: flex;
 }
 .profile-photo-section{
-    width: 250px;
-    height: 250px;
+    width: 30%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #861f1f;
+}
+.profile-photo-card{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-color: rgb(0, 246, 123);
+}
+.profile-photo{
+    width: 100%;
+    height: 100%;
+}
+.profile-info-section{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.info-blockirator{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.first-row{
+    width: 100%;
+    height: 25%;
+}
+.user-name{
+    font: 1em sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+}
+.user-selector{
+    color: #6B6B6B;
+    font: 1em sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+.second-row{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-around;
+    align-items: start;
+}
+.rating-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.rating-container p {
+    font: 1em sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+}
+.star-rating-img{
+    width: 150px;
+    height: 20px;
+}
+.third-row{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    gap: 30px;
+}
+.create-announcment-btn{
+    width: 300px;
+    height: 65px;
+    border-radius: 5px;
+    background-color: #FEA540;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ask-for-pet-btn{
+    width: 535px;
+    height: 65px;
+    border-radius: 5px;
+    background-color: #FEA540;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.create-announcment-btn:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #FEA540;
+    border: 2px solid #FEA540;
+    transition: 0.3s;
+}
+.ask-for-pet-btn:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #FEA540;
+    border: 2px solid #FEA540;
+    transition: 0.3s;
+}
+.first-slider-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.second-slider-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 картки на слайд */
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding: 15px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-top {
+    flex-grow: 1;
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: auto;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.card span {
+    color: #FEA540;
+    font-weight: 600;
+}
+
+.card button {
+    background: #FEA540;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 8px;
+}
+
+.pagination button {
+    background: #FEA540;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background: #111;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 картки на слайд для планшетів */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 картка на слайд для мобільних пристроїв */
+    }
 }

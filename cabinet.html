@@ -84,6 +84,54 @@
         </div>
     </div>
 
+    <div class="popup" id="popup5">
+        <div class="popup-content">
+            <div class="popRow">
+                <button id="closeBtn" class="close-popup-btn">×</button>
+                <h1 class="AnounsHeadTxt">Створення оголошення</h1>
+            </div>
+            <div class="popRow">
+                <input type="image" id="image" name="image" placeholder="Надіслати фото" required>
+            </div>
+            <div class="popRow">
+                <input type="text" name="descript" id="descript" placeholder="Опис" required>
+            </div>
+            <div class="popRow selectorRow">
+                <select name="species" id="species">
+                    <option value="default">Вид</option> 
+                    <option value="cat">Кіт</option>
+                    <option value="dog">Собака</option>
+                    <option value="other">Інше</option>
+                </select>
+                <select name="gender" id="gender">
+                    <option value="default">Стать</option> 
+                    <option value="male">Хлопчик</option>
+                    <option value="female">Дівчинка</option>
+                </select>
+                <select name="age" id="age">
+                    <option value="default">Вік</option> 
+                    <option value="0">менеше 1</option>
+                    <option value="1">1~2</option>
+                    <option value="2">2~3</option>
+                </select>
+            </div>
+            <div class="popRow selectorRow2">
+                <select name="" id="">
+                    <option value="default">Розмір</option>
+                </select>
+                <select name="" id="">
+                    <option value="default">Стерилізація</option>
+                </select>
+            </div>
+            <div class="popRow">
+                <input type="text" class="message" name="message" id="message" placeholder="Опис(не обов'язково)" not-required>
+            </div>
+            <div class="popRow">
+                <div class="sendBtn" id="sendBtn">Опублікувати</div>
+            </div>
+        </div>
+    </div>
+
     <div class="body-container">
         <div class="body1">
             <div class="header">
@@ -92,7 +140,7 @@
                     <div class="navigation">
                         <a href="./index.html"><p class="navBtn">Головна</p></a>
                         <a href="./vetKlinika.html"><p class="navBtn">Ветклініка</p></a>
-                        <a href=""><p class="navBtn">Особистий кабінет</p></a>
+                        <a href="./cabinet.html"><p class="navBtn">Особистий кабінет</p></a>
                         <a href="PatMatcher.html"><p class="navBtn">Оголошення</p></a>
                         <a href="./help.html"><p class="helpBtn">Допомогти</p></a>
                     </div>
@@ -122,28 +170,65 @@
             </div>
           <div class="phantom-header"></div>
             <div class="cabinet">
-                <div class="cabinet-blockirator">
-                    <div class="cabinet-header-row">
-                        <div class="profile-photo-section"></div>
+                <div class="cabinet-header-row">
+                    <div class="cabinet-blockirator">
+                        <div class="profile-photo-section">
+                            <div class="profile-photo-card">
+                                <img src="images/Avatar.png" alt="Avatar" class="profile-photo">
+                            </div>
+                        </div>
                         <div class="profile-info-section">
-                            <div class="first-row">
-                                <div class="profile-name">Ім'я</div>
-                                <div class="profile-selector">Волонтер</div>
-                            </div>
-                            <div class="second-row">
-                                <div class="star-rating"></div>
-                                <img src="images/Stars.png" alt="">
-                            </div>
-                            <div class="third-row">
-                                <div class="create-announcment-btn"></div>
-                                <div class="ask-for-pet-btn"></div>
+                            <div class="info-blockirator">
+                                <div class="first-row">
+                                    <p class="user-name">Імя користувача</p>
+                                    <p class="user-selector">Волонотер</p>
+                                </div>
+                                <div class="second-row">
+                                    <div class="rating-container"><p class="star-rating">Ваш рейтинг: </p> <img src="images/Stars.png" alt="" class="star-rating-img"></div>
+                                    <div class="active-announcments-number"><p>Активних оголошень: 8</p></div>  
+                                </div>
+                                <div class="third-row">
+                                    <div class="create-announcment-btn" id="create-announcment-btn">Створити оголошення</div>
+                                    <div class="ask-for-pet-btn" id="ask-for-pet-btn">Надіслати запит на здачу знайденої тварини</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="first-slider-row">
+                    <h1>Ваші оголошення</h1>
+                    <section class="card-grid">
+                        <!-- Картки будуть додані динамічно через JavaScript -->
+                    </section>
+                    
+                    <!-- Пагінація -->
+                    <div class="pagination">
+                        <button class="prev-btn">←</button>
+                        <button class="page-btn" data-page="1">1</button>
+                        <button class="page-btn" data-page="2">2</button>
+                        <button class="next-btn">→</button>
+                    </div>
+                </div>
+                <div class="second-slider-row">
+                    <h1>Ваші оголошення</h1>
+                    <section class="card-grid">
+                        <!-- Картки будуть додані динамічно через JavaScript -->
+                    </section>
+                    
+                    <!-- Пагінація -->
+                    <div class="pagination">
+                        <button class="prev-btn">←</button>
+                        <button class="page-btn" data-page="1">1</button>
+                        <button class="page-btn" data-page="2">2</button>
+                        <button class="next-btn">→</button>
+                    </div>
+                </div>
             </div>
+                
         </div>
     </div>
     
+    <script src="script.js"></script>
+    <script src="cabinet.js"></script>
 </body>
 </html>

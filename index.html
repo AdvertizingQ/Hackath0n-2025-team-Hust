@@ -112,8 +112,8 @@
             <div class="navigation">
                 <a href="./index.html"><p class="navBtn main-option">Головна</p></a>
                 <a href="./vetKlinika.html"><p class="navBtn another-option">Ветклініка</p></a>
-                <a href=""><p class="navBtn another-option">Особистий кабінет</p></a>
-                <a href="PatMatcher.html"><p class="navBtn another-option">Оголошення</p></a>
+                <a href="./cabinet.html"><p class="navBtn another-option">Особистий кабінет</p></a>
+                <a href="./PatMatcher.html"><p class="navBtn another-option">Оголошення</p></a>
                 <a href="./help.html"><p class="helpBtn">Допомогти</p></a>
             </div>
             <div class="burger-menu" id="burgerMenu">
@@ -126,92 +126,103 @@
                 <div class="signInBtn cursor" id="btnSignIn"><img src="./images/Group2.png" alt="profile"></div>
             </div>
         </div>
-      </div>
+    </div>
+    
+    <!-- Мобільне меню -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="./index.html">Головна</a>
+      <a href="./vetKlinika.html">Ветклініка</a>
+      <a href="">Особистий кабінет</a>
+      <a href="PatMatcher.html">Оголошення</a>
+      <a href="./help.html">Допомогти</a>
+      <!-- Кнопка для реєстрації/входу -->
+      <button id="mobileAuthBtn" class="mobile-btn">Реєстрація/Вхід</button>
+      <!-- Кнопка для зміни мови -->
+      <button id="mobileLanguageBtn" class="mobile-btn">Мова</button>
+  </div>
 
-
-
-      <div class="main">
-        <div class="blokirator main-blok">
-        <div class="slider_block">
-          <div class="slider">
-            
-            <div class="slide active">
-              <img src="./images/slide1.png" alt="Slide 1" />
-              <div class="slide-text">
-                <h2 class="text-mainA">
-                  <span class="orange">Adopt Me.</span><br />Хто ми?
-                </h2>
-                <p class="textik">Організація підтримки безпритульних тварин.</p>
-                <button class="slide-btn">Детальніше...</button>
-              </div>
-            </div>
+      <!-- Блок-слайдер з відступом зверху, щоб не перекрився шапкою -->
+    <div class="slider_block">
+      <div class="slider">
         
-            <div class="slide">
-              <img src="./images/slide2.png" alt="Slide 2" />
-              <div class="slide-text">
-                <h2 class="text-mainA">
-                  <span class="orange">Ветклініка</span><br />Турбота, що лікує.
-                </h2>
-                <p class="textik">Наша клініка – це місце, де тварини отримують найкращий догляд.</p>
-                <button class="slide-btn">Детальніше...</button>
-              </div>
-            </div>
-          
-            <div class="slide">
-              <img src="./images/slide3.png" alt="Slide 3" />
-              <div class="slide-text">
-                <h2 class="text-mainA">
-                  <span class="orange">Притулки для тварин</span><br />Друга спроба на щасливе життя.
-                </h2>
-                <p class="textik">Тимчасовий дім, турбота і шлях до нової родини.</p>
-                <button class="slide-btn">Детальніше...</button>
-              </div>
-            </div>
-          
-            <div class="slide">
-              <img src="./images/slide4.png" alt="Slide 4" />
-              <div class="slide-text">
-                <h2 class="text-mainA">
-                  <span class="orange">AdoptMe.</span><br />Об’єднані любов’ю до тварин.
-                </h2>
-                <p class="textik">Ми рятуємо, лікуємо й даруємо шанс на краще життя.</p>
-                <button class="slide-btn">Детальніше...</button>
-              </div>
-            </div>
-          
-            <div class="slider-nav">
-              <div class="prev">&#10094;</div>
-              <div class="next">&#10095;</div>
-            </div>
-            
-            <div class="slider-dots">
-              <span class="dot active"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-            
+        <!-- Перший слайд -->
+        <div class="slide active">
+          <img src="./images/slide1.png" alt="Slide 1" />
+          <div class="slide-text">
+            <h2>
+              <span class="orange">Adopt Me.</span><br />Хто ми?
+            </h2>
+            <p>Організація підтримки безпритульних тварин.</p>
+            <button class="slide-btn">Детальніше...</button>
           </div>
         </div>
-
-
-        <div class="about-us">
-          <h2><span class="black">Про</span> <span class="orange1">нас</span></h2>
-          <div class="about-us-content" id = "section1">
-            <div class="about-text">
-              <h1>AdoptMe.</h1>
-              <p>
-                AdoptMe. — платформа для розміщення та поширення інформації про тварин, які залишились без нагляду. 
-                Це універсальна платформа, де кожен зможе зробити свій внесок у порятунок безпритульних тварин — 
-                передати знайдену тварину до притулку або взяти звідти нового улюбленця.
-              </p>
-              <button class="team-btn">Команда розробників</button>
-            </div>
-            <div class="about-image">
-              <img src="./images/about-us.jpg" alt="Про нас">
-            </div>
+        <!-- Другий слайд -->
+        <div class="slide">
+          <img src="./images/slide2.png" alt="Slide 2" />
+          <div class="slide-text">
+            <h2>
+              <span class="orange">Ветклініка</span><br />Турбота, що лікує.
+            </h2>
+            <p>Наша клініка – це місце, де тварини отримують найкращий догляд.</p>
+            <button class="slide-btn">Детальніше...</button>
           </div>
-        </div> 
+        </div>
+        <!-- Третій слайд -->
+        <div class="slide">
+          <img src="./images/slide3.png" alt="Slide 3" />
+          <div class="slide-text">
+            <h2>
+              <span class="orange">Притулки для тварин</span><br />Друга спроба на щасливе життя.
+            </h2>
+            <p>Тимчасовий дім, турбота і шлях до нової родини.</p>
+            <button class="slide-btn">Детальніше...</button>
+          </div>
+        </div>
+        <!-- Четвертий слайд -->
+        <div class="slide">
+          <img src="./images/slide4.png" alt="Slide 4" />
+          <div class="slide-text">
+            <h2>
+              <span class="orange">AdoptMe.</span><br />Об’єднані любов’ю до тварин.
+            </h2>
+            <p>Ми рятуємо, лікуємо й даруємо шанс на краще життя.</p>
+            <button class="slide-btn">Детальніше...</button>
+          </div>
+        </div>
+        <!-- Стрілки навігації слайдера -->
+        <div class="slider-nav">
+          <div class="prev">&#10094;</div>
+          <div class="next">&#10095;</div>
+        </div>
+        <!-- Точки навігації слайдера -->
+        <div class="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- Новий блок про нас -->
+<div class="about-us">
+  <h2><span class="black">Про</span> <span class="orange">нас</span></h2>
+  <div class="about-us-content" id = "section1">
+    <div class="about-text">
+      <h1>AdoptMe.</h1>
+      <p>
+        AdoptMe. — платформа для розміщення та поширення інформації про тварин, які залишились без нагляду. 
+        Це універсальна платформа, де кожен зможе зробити свій внесок у порятунок безпритульних тварин — 
+        передати знайдену тварину до притулку або взяти звідти нового улюбленця.
+      </p>
+      <button class="team-btn">Команда розробників</button>
+    </div>
+    <div class="about-image">
+      <img src="./images/about-us.jpg" alt="Про нас">
+    </div>
+  </div>
+</div>
 
 
         <div class="vetclinika">

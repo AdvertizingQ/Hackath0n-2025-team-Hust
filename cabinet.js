@@ -309,9 +309,21 @@ $(document).ready(function () {
     renderLikedCards();
     updatePaginationLikes();
 });
-$('#create-announcment-btn').on("click", function () {
-    $("#poppup5").css("display", "flex"); // Показуємо попап для створення оголошення
-    $(".popup-content").addClass("bcg-color"); // Додаємо клас для стилізації
-    $("body").addClass("no-scroll"); // Забороняємо прокрутку
-    $(".body-content").addClass("blur"); // Додаємо ефект розмиття
-  });
+$(document).ready(function () {
+    // Отримуємо інформацію про авторизованого користувача
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+    if (!loggedInUser) {
+        // Якщо користувач не авторизований, перенаправляємо на сторінку входу
+        alert('Будь ласка, увійдіть, щоб отримати доступ до кабінету.');
+        window.location.href = './index.html';
+    } else {
+        // Заповнюємо інформацію в кабінеті
+        populateProfileInfo(loggedInUser);
+    }
+});
+
+function populateProfileInfo(user) {
+    $('.user-name').text(user.name); // Ім'я користувача
+    $('.user-selector').text(user.selector); // Волонтер або Притулок
+}

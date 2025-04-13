@@ -87,6 +87,14 @@
     line-height: 50px;
     font-size: 28px;
     z-index: 1;
+    transition: all ease 0.3s;
+  }
+
+  .news-arrow:hover{
+    background-color: #ffff;
+    color: #FEA540;
+    border: 2px solid #FEA540;
+    transition: all ease 0.3s;
   }
   
   .news-arrow.left {

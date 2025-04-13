@@ -49,12 +49,39 @@ background-color: rgb(255, 255, 255);
     justify-content: space-around;
     font-family: "Inter", sans-serif;
 }
-.navBtn{
+
+.main-option{
+    color:  rgba(254, 165, 64, 1);
+}
+
+.another-option{
+    color: #000;
+}
+
+.navBtn {
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
-    color: #111;
-}
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .navBtn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(254, 165, 64, 1); /* колір підкреслення */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .navBtn:hover::after {
+    width: 100%;
+  }
+  
 
 .helpBtn{
     background-color: #FEA540;
@@ -66,11 +93,22 @@ background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
+    transition:all ease 0.2s;
 }
+
+.helpBtn:hover{
+    background-color: #fff;
+    color: rgba(254, 165, 64, 1);
+    border: 2px solid rgba(254, 165, 64, 1);
+    transition:all ease 0.2s;
+}
+
 .otherBtns{
     width: 10%;
     height: 10vh;
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .erthBtn{
     width:50%;

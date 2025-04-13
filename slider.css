@@ -16,6 +16,7 @@
     height: 600px;
     display: none;
     position: relative;
+    transition: opacity 0.5s ease-in-out;
   }
   
   .slide.active {
@@ -59,7 +60,7 @@
     background-color: #FEA540;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 20px 40px;
     border-radius: 10px;
     font-size: 20px;
     cursor: pointer;
@@ -67,7 +68,9 @@
   }
   
   .slide-btn:hover {
-    background-color: #FEA540;
+    background-color: #ffff;
+    color: #FEA540;
+    transition: background 0.3s ease;
   }
   
   /* Стрілки слайдера */
@@ -86,6 +89,15 @@
     line-height: 50px;
     font-size: 28px;
     z-index: 1;
+    transition: background 0.3s ease;
+  }
+
+  .slider-nav .prev:hover,
+  .slider-nav .next:hover{
+    background: #fff;
+    color: #FEA54080;
+    border: 2px solid  #FEA54080;
+    transition: background 0.3s ease;
   }
   
   .slider-nav .prev {

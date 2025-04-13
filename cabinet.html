@@ -24,11 +24,11 @@
             <!-- Другий рядок -->
             <div class="popRow">
                 <div class="popup-button">
-                    <img src="images/Volonteer.png" alt="Волонтер" class="popup-image1">
+                    <img src="images/Volonteer.png" alt="Волонтер" class="popup-image1" id="volunteerBtn">
                     <p>Волонтер</p>
                 </div>
                 <div class="popup-button">
-                    <img src="images/petshelter.png" alt="Притулок" class="popup-image2">
+                    <img src="images/petshelter.png" alt="Притулок" class="popup-image2" id="shelterBtn">
                     <p>Притулок</p>
                 </div>
             </div>
@@ -136,12 +136,13 @@
         <div class="body1">
             <div class="header">
                 <div class="blokirator">
+                  
                     <div class="name">Adopt Me.</div>
                     <div class="navigation">
-                        <a href="./index.html"><p class="navBtn">Головна</p></a>
-                        <a href="./vetKlinika.html"><p class="navBtn">Ветклініка</p></a>
-                        <a href="./cabinet.html"><p class="navBtn">Особистий кабінет</p></a>
-                        <a href="PatMatcher.html"><p class="navBtn">Оголошення</p></a>
+                        <a href="./index.html"><p class="navBtn main-option">Головна</p></a>
+                        <a href="./vetKlinika.html"><p class="navBtn another-option">Ветклініка</p></a>
+                        <a href="./cabinet.html"><p class="navBtn another-option">Особистий кабінет</p></a>
+                        <a href="./PatMatcher.html"><p class="navBtn another-option">Оголошення</p></a>
                         <a href="./help.html"><p class="helpBtn">Допомогти</p></a>
                     </div>
                     <div class="burger-menu" id="burgerMenu">
@@ -150,10 +151,10 @@
                         <span></span>
                     </div>
                     <div class="otherBtns">
-                        <div class="erthBtn cursor" id="erthBtn"><img src="./images/earth1.png" alt="language"></div>
                         <div class="signInBtn cursor" id="btnSignIn"><img src="./images/Group2.png" alt="profile"></div>
                     </div>
                 </div>
+              
             </div>
             
             <!-- Мобільне меню -->
@@ -210,7 +211,7 @@
                     </div>
                 </div>
                 <div class="second-slider-row">
-                    <h1>Ваші оголошення</h1>
+                    <h1>Ваші уподобання</h1>
                     <section class="card-grid">
                         <!-- Картки будуть додані динамічно через JavaScript -->
                     </section>
@@ -223,9 +224,30 @@
                         <button class="next-btn">→</button>
                     </div>
                 </div>
-            </div>
+
                 
         </div>
+        <div class="footer">
+            <div class="footer-links">
+              <a href="./index.html">Головна</a>
+              <a href="#">Ветклініка</a>
+              <a href="#">Особистий кабінет</a>
+              <a href="#">Оголошення</a>
+          </div>
+          <div class="footer-main">
+          <div class="footer-social">
+              <a href="#"><img class="alt1" src="./images/google-icon.png" alt="Google"></a>
+              <a href="#"><img class="alt" src="./images/instagram-icon.png" alt="Instagram"></a>
+              <a href="#"><img class="alt" src="./images/facebook-icon.png" alt="Facebook"></a>
+          </div>
+          <div class="footer-contact">
+              <p>Контакти:</p>
+              <p>+380 85 349 54 32</p>
+              <p><a href="mailto:mariapelipek@gmail.com">mariapelipek@gmail.com</a></p>
+          </div>
+          </div>
+          </div>
+    </div>
     </div>
     
     <script src="script.js"></script>

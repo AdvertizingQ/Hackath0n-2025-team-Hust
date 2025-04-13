@@ -43,31 +43,66 @@ $('#logInBtn').on('click', function () {
   $('body').addClass('no-scroll'); // Забороняємо прокрутку
 });
 
+let selectedRole = ""; // Змінна для збереження вибору
+
+// Обробник для вибору "Волонтер"
+$('#volunteerCard').on('click', function () {
+    selectedRole = "Волонтер"; // Зберігаємо вибір
+    $('.selector-card').removeClass('selected'); // Знімаємо виділення з усіх карток
+    $(this).addClass('selected'); // Додаємо виділення до вибраної картки
+});
+
+// Обробник для вибору "Притулок"
+$('#shelterCard').on('click', function () {
+    selectedRole = "Притулок"; // Зберігаємо вибір
+    $('.selector-card').removeClass('selected'); // Знімаємо виділення з усіх карток
+    $(this).addClass('selected'); // Додаємо виділення до вибраної картки
+});
+
+// Обробник для кнопки реєстрації
 $('#registerBtn').on('click', function () {
   const name = $('#name1').val();
   const email = $('#email1').val();
   const password = $('#password1').val();
+
   if (name && email && password) {
-    users.push({ name, email, password });
-    $('#name1').val('');
-    $('#email1').val('');
-    $('#password1').val('');
-    closePopup();
-    alert('Ви успішно зареєстровані!');
+      // Отримуємо існуючих користувачів із localStorage
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+      
+      // Додаємо нового користувача з фіксованим selector "Притулок"
+      users.push({ name, email, password, selector: "Притулок" });
+      localStorage.setItem('users', JSON.stringify(users)); // Зберігаємо в localStorage
+
+      // Очищуємо поля форми
+      $('#name1').val('');
+      $('#email1').val('');
+      $('#password1').val('');
+      
+      closePopup(); // Закриваємо попап
+      alert('Ви успішно зареєстровані!');
   } else {
-    alert('Будь ласка, заповніть усі поля!');
+      alert('Будь ласка, заповніть усі поля!');
   }
 });
 
 $('#loginBtn').on('click', function () {
   const email = $('#email2').val();
   const password = $('#password2').val();
+
+  // Отримуємо користувачів із localStorage
+  const users = JSON.parse(localStorage.getItem('users')) || [];
   const user = users.find(user => user.email === email && user.password === password);
 
   if (user) {
+      // Примусово встановлюємо selector як "Притулок"
+      user.selector = "Притулок";
+
+      // Зберігаємо оновлену інформацію про користувача в localStorage
+      localStorage.setItem('loggedInUser', JSON.stringify(user));
+
       closePopup(); // Закриваємо попап
       alert(`Ласкаво просимо, ${user.name}!`);
-      populateProfileInfo(user); // Заповнюємо інформацію в кабінеті
+      window.location.href = './cabinet.html'; // Перенаправляємо до кабінету
   } else {
       alert('Неправильний логін або пароль!');
   }

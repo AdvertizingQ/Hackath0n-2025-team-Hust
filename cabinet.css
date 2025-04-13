@@ -36,7 +36,7 @@
     justify-content: center;
     align-items: center;
     background-size: cover;
-    background-color: rgb(0, 246, 123);
+    background-color: #D9D9D9;
 }
 .profile-photo{
     width: 100%;
@@ -257,5 +257,59 @@
 @media (max-width: 480px) {
     .card-grid {
         grid-template-columns: repeat(1, 1fr); /* 1 картка на слайд для мобільних пристроїв */
+    }
+}
+
+@media (max-width: 768px) {
+    .cabinet-header-row {
+        flex-direction: column; /* Розташування елементів у колонку */
+        height: auto; /* Автоматична висота */
+        align-items: center; /* Вирівнювання по центру */
+        padding: 20px; /* Відступи для зручності */
+    }
+
+    .profile-photo-section {
+        width: 100%; /* Фото займає всю ширину */
+        margin-bottom: 20px; /* Відступ між секціями */
+    }
+
+    .profile-photo-card {
+        width: 200px; /* Зменшення розміру фото */
+        height: 200px;
+    }
+
+    .profile-info-section {
+        width: 100%; /* Інформація займає всю ширину */
+        align-items: center; /* Центрування тексту */
+    }
+}
+
+/* Адаптив для mobile (ширина екрану до 480px) */
+@media (max-width: 480px) {
+    .cabinet-header-row {
+        flex-direction: column; /* Розташування елементів у колонку */
+        height: auto; /* Автоматична висота */
+        align-items: center; /* Вирівнювання по центру */
+        padding: 15px; /* Зменшення відступів */
+    }
+
+    .profile-photo-card {
+        width: 150px; /* Ще більше зменшення фото */
+        height: 150px;
+    }
+
+    .user-name {
+        font-size: 24px; /* Зменшення розміру шрифту */
+    }
+
+    .user-selector {
+        font-size: 16px; /* Зменшення розміру шрифту */
+    }
+
+    .create-announcment-btn,
+    .ask-for-pet-btn {
+        width: 100%; /* Кнопки займають всю ширину */
+        font-size: 16px; /* Зменшення розміру тексту */
+        height: 50px; /* Зменшення висоти кнопок */
     }
 }

@@ -16,6 +16,7 @@
 .blokirator span{
     font-size: 50px;
     font-weight: 600;
+    color: #FEA540;
 }
 .detailcardRow2{
     width: 100%;
@@ -43,6 +44,51 @@
 .shelter-description-space{
     width: 30%;
     height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shelter-description{
+    width: 320px;
+    height: 360px;
+    border-radius: 10px; 
+    box-shadow: 0px 0px 3px 1px #9c9c9c;
+    opacity: 0.1;
+    position: absolute;
+}
+.shelter-description:hover{
+    opacity: 1;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.shelter-description-row1{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shelter-description-row1-2{
+    color: #FEA540;
+}
+.shelter-description-row2{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shelter-description-row3{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shelter-description-row3-2{
+    width: 100px;
+    height: 20px;
+    background-size: cover;
 }
 /* Загальний стиль для pet-info-space */
 .pet-info-space {
@@ -150,3 +196,4 @@
     border: 3px solid #FEA540;
     cursor: pointer;
 }
+

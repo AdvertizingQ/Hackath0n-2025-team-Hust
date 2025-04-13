@@ -6,6 +6,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Ветклініка</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
     <link rel="stylesheet" href="./VetKlinika/vetKlinika.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +14,94 @@
 </head>
 
 <body>
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <!-- Перший рядок -->
+            <div class="popRow"> 
+            <button id="closeBtn" class="close-popup-btn">×</button>
+            <h2>Зареєструватись або увійти</h2>
+        </div>
+            <!-- Другий рядок -->
+            <div class="popRow">
+                <div class="popup-button">
+                    <img src="images/Volonteer.png" alt="Волонтер" class="popup-image1">
+                    <p>Волонтер</p>
+                </div>
+                <div class="popup-button">
+                    <img src="images/petshelter.png" alt="Притулок" class="popup-image2">
+                    <p>Притулок</p>
+                </div>
+            </div>
+            <!-- Третій рядок -->
+            <div class="popup-footer">
+                <div class="popup-link-btn1" id="signInBtn">Зареєструватись</div>
+                <div class="popup-link-btn2" id="logInBtn">Увійти</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup" id="popup2">
+        <div class="popup-content">
+            <div class="popRow">
+                <button id="closeBtn" class="close-popup-btn">×</button>
+                <input type="text" name="name" id="name1" placeholder="Ім`я" required>
+            </div>
+            <div class="popRow">
+                <input type="email" id="email1" name="email" placeholder="Електронна пошта" required>
+            </div>
+            <div class="popRow">
+                <input type="password" name="password" id="password1" placeholder="Пароль" required>
+            </div>
+            <div class="popRow">
+                <div class="registerBtn" id="registerBtn">Зареєструватись</div>
+            </div>
+            <div class="popRow"><p>Або</p></div>
+            <div class="popRow">
+                <div class="otherWays"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup" id="popup3">
+        <div class="popup-content">
+            <div class="popRow">
+                <button id="closeBtn" class="close-popup-btn">×</button>
+                <div class="phantomInput"></div>
+            </div>
+            <div class="popRow">
+                <input type="email" id="email2" name="email" placeholder="Електронна пошта" required>
+            </div>
+            <div class="popRow">
+                <input type="password" name="password" id="password2" placeholder="Пароль" required>
+            </div>
+            <div class="popRow">
+                <div class="loginBtn" id="loginBtn">Увійти</div>
+            </div>
+            <div class="popRow"><p>Або</p></div>
+            <div class="popRow">
+                <div class="otherWays"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup4">
+        <div class="popup-content">
+            <div class="popRow">
+                <button id="closeBtn" class="close-popup-btn">×</button>
+                <input type="text" name="name3" id="name3" placeholder="Ім`я" required>
+            </div>
+            <div class="popRow">
+                <input type="email" id="email3" name="email3" placeholder="Електронна пошта" required>
+            </div>
+            <div class="popRow">
+                <input type="number" name="phoneNum" id="phoneNum" placeholder="Номер телефону" required>
+            </div>
+            <div class="popRow">
+              <input type="text" class="message" name="message" id="message" placeholder="Опис(не обов'язково)" not-required>
+            </div>
+            <div class="AdoptInfoBtn"><p>Відправити</p></div>
+        </div>
+      </div>
     
 <div class="body-content">
 <div class="wrap">
@@ -71,7 +160,7 @@
                             <p class="grafik-content">Телефон: +38 (099) 123-45-67</p>
                             <p class="grafik-content">Email: info@dobryylap.com</p>
                         </ul>
-                        <a href="#" class="reg"><button class="register_btn">Записатись на прийом</button></a>
+                        <a href="#" class="reg"><button class="register_btn" id="registerBtn1">Записатись на прийом</button></a>
                     </div>
                     <div class="mini_main_block4">
                         <iframe class="karta" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2574.2198008530663!2d23.959336276058956!3d49.819533932590744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae76b6d51ed65%3A0x640d1f3334ac8c1d!2z0JLQtdGC0LXRgNC40L3QsNGA0L3QsCDQutC70ZbQvdGW0LrQsCDQlNC-0LrRgtC-0YAgVkVU!5e0!3m2!1sru!2sua!4v1744496306874!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -106,6 +195,7 @@
 </div>
 
 <script src="VetKlinika/vetKlinika.js"></script>
+<script src="script.js"></script>
 
 </body>
 

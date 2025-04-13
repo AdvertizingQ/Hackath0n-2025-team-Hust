@@ -66,3 +66,7 @@ $(".AdoptInfoBtn").on("click", function () {
     $("#phoneNumber").val(''); // Очищаємо поле вводу
     $("#message").val(""); // Очищаємо поле вводу
 });
+$(".register_btn").on("click", function () {
+  $("#popup4").css("display", "flex"); // Показуємо popup4
+    $(".popup-content").addClass("bcg-color2"); // Додаємо клас для стилізації
+});

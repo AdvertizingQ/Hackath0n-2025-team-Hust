@@ -94,6 +94,7 @@ background-color: rgb(255, 255, 255);
     height: calc(100vh - 25vh); /* Висота екрану мінус висота хедера */
     padding-top: 40vh; /* Відступ для фіксованого хедера */
     background-color: #fff;
+    margin-bottom: 100px; /* Відступ знизу для футера */;
 }
 
 .cat-image {

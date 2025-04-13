@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Me.</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="details/details.css">
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <!-- Перший рядок -->
+            <div class="popRow"> 
+            <button id="closeBtn" class="close-popup-btn">×</button>
+            <h2>Зареєструватись або увійти</h2>
+        </div>
+            <!-- Другий рядок -->
+            <div class="popRow">
+                <div class="popup-button">
+                    <img src="images/Volonteer.png" alt="Волонтер" class="popup-image1">
+                    <p>Волонтер</p>
+                </div>
+                <div class="popup-button">
+                    <img src="images/petshelter.png" alt="Притулок" class="popup-image2">
+                    <p>Притулок</p>
+                </div>
+            </div>
+            <!-- Третій рядок -->
+            <div class="popup-footer">
+                <div class="popup-link-btn1" id="signInBtn">Зареєструватись</div>
+                <div class="popup-link-btn2" id="logInBtn">Увійти</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup" id="popup2">
+        <div class="popup-content">
+            <div class="popRow">
+                <button id="closeBtn" class="close-popup-btn">×</button>
+                <input type="text" name="name" id="name1" placeholder="Ім`я" required>
+            </div>
+            <div class="popRow">
+                <input type="email" id="email1" name="email" placeholder="Електронна пошта" required>
+            </div>
+            <div class="popRow">
+                <input type="password" name="password" id="password1" placeholder="Пароль" required>
+            </div>
+            <div class="popRow">
+                <div class="registerBtn" id="registerBtn">Зареєструватись</div>
+            </div>
+            <div class="popRow"><p>Або</p></div>
+            <div class="popRow">
+                <div class="otherWays"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup" id="popup3">
+        <div class="popup-content">
+            <div class="popRow">
+                <button id="closeBtn" class="close-popup-btn">×</button>
+                <div class="phantomInput"></div>
+            </div>
+            <div class="popRow">
+                <input type="email" id="email2" name="email" placeholder="Електронна пошта" required>
+            </div>
+            <div class="popRow">
+                <input type="password" name="password" id="password2" placeholder="Пароль" required>
+            </div>
+            <div class="popRow">
+                <div class="loginBtn" id="loginBtn">Увійти</div>
+            </div>
+            <div class="popRow"><p>Або</p></div>
+            <div class="popRow">
+                <div class="otherWays"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup4">
+        <div class="popup-content">
+            <div class="popRow">
+                <button id="closeBtn" class="close-popup-btn">×</button>
+                <input type="text" name="name3" id="name3" placeholder="Ім`я" required>
+            </div>
+            <div class="popRow">
+                <input type="email" id="email3" name="email3" placeholder="Електронна пошта" required>
+            </div>
+            <div class="popRow">
+                <input type="number" name="phoneNum" id="phoneNum" placeholder="Номер телефону" required>
+            </div>
+            <div class="popRow">
+              <input type="text" class="message" name="message" id="message" placeholder="Опис(не обов'язково)" not-required>
+            </div>
+            <div class="AdoptInfoBtn"><p>Відправити</p></div>
+        </div>
+      </div>
+
+    <div class="body-content">
+        <div class="body1">
+            <!-- Шапка -->
+      <div class="header">
+        <div class="blokirator">
+          <div class="name">Adopt Me.</div>
+          <div class="navigation">
+            <a href="./index.html"><p class="navBtn">Головна</p></a>
+            <a href=""><p class="navBtn">Притулок</p></a>
+            <a href=""><p class="navBtn">Ветклініка</p></a>
+            <a href=""><p class="navBtn">Команда</p></a>
+            <a href=""><p class="navBtn">Контакти</p></a>
+            <a href="./help.html"><p class="helpBtn">Допомогти</p></a>
+          </div>
+          <div class="otherBtns">
+            <div class="erthBtn cursor" id="erthBtn">
+              <img src="./images/earth1.png" alt="Зміна мови">
+            </div>
+            <div class="signInBtn cursor" id="btnSignIn">
+              <img src="./images/Group2.png" alt="Профіль користувача">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="phantomHeader"></div>
+
+            <div class="detailcard">
+                <div class="detailcardRow1">
+                    <div class="blokirator"><span id="animal-name">Сніжок</span></div>
+                </div>
+                <div class="detailcardRow2">
+                    <div class="blokirator">
+                        <div class="photo-space">
+                            <div class="pet-photocard"></div>
+                        </div>
+                        <div class="shelter-description-space"></div>
+                        <div class="pet-info-space">
+                            <span>Інформація</span>
+                            <div class="pet-info">
+                                <div class="pet-info-row1">
+                                    <div class="pet-info-row1-1">Вік:</div>
+                                    <div class="pet-info-row1-2">3 роки</div>
+                                </div>
+                                <div class="pet-info-row2">
+                                    <div class="pet-info-row2-1">Стать:</div>
+                                    <div class="pet-info-row2-2">Чоловіча</div>
+                                </div>
+                                <div class="pet-info-row3">
+                                    <div class="pet-info-row3-1">Порода:</div>
+                                    <div class="pet-info-row3-2">Кіт</div>
+                                </div>
+                                <div class="pet-info-row4">
+                                    <div class="pet-info-row4-1">Стерилізація:</div>
+                                    <div class="pet-info-row4-2">Так</div>
+                                </div>
+                                <div class="pet-info-row5">
+                                    <div class="pet-info-row5-1">Розмір:</div>
+                                    <div class="pet-info-row5-2">Великий</div>
+                                </div>
+                                <div class="pet-info-row6">
+                                    <div class="pet-info-row6-1">Притулок:</div>
+                                    <div class="pet-info-row6-2">#SaveAnimals</div>
+                                </div>
+                                <div class="description-space">
+                                    <div class="descriptionTxt"> 
+                                       <p id="animal-description">Кішка свійська — Ляля — граційна красуня з неймовірно яскравими очима і строкатим триколірним хутром. Вона уважна, але з характером — завжди знає, чого хоче. Ляля — саме та, хто стане справжньою королевою у вашій домівці. Її присутність додає затишку, а ніжність — тепла. Шукає господаря, який буде цінувати її незалежність і даруватиме турботу.</p>
+                                    </div>
+                                </div>
+                                <div class="descrNavBtns">
+                                    <button class="Btn_Adopt">Усиновити</button>
+                                    <button class="Btn_Help">Допомогти</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="details.js"></script>
+</body>
+</html>

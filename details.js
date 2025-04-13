@@ -1,7 +1,3 @@
-function toggleLike(element) {
-    const heart = element.querySelector('svg');
-    heart.classList.toggle('liked');
-}
 const animals = [
     {
         name: "Іскорка",
@@ -202,92 +198,23 @@ const animals = [
         image: "./PatMatcher/petImages/plombir.jpg"
     }
 ];
-
+const params = new URLSearchParams(window.location.search);
+const animalId = parseInt(params.get("id")); // Отримуємо ID тварини
+const animal = animals.find(a => a.id === animalId);
+if (animal) {
+    $("#animal-name").text(animal.name); // Ім'я
+    $("#animal-description").text(animal.description); // Опис
+    $(".pet-info-row1-2").text(animal.age); // Вік
+    $(".pet-info-row2-2").text(animal.gender); // Стать
+    $(".pet-info-row3-2").text(animal.type); // Порода
+    $(".pet-info-row4-2").text(animal.sterilized); // Стерилізація
+    $(".pet-info-row5-2").text(animal.size); // Розмір
+    $(".pet-photocard").css("background-image", `url(${animal.image})`); // Фото
+} else {
+    $("body").html("<h1>Тварину не знайдено</h1>"); // Якщо ID не знайдено
+}
 $(document).ready(function () {
-    const cardsPerPage = 6; // Кількість карток на сторінку
-    const totalPages = 3; // Загальна кількість сторінок
-    let currentPage = 1; // Поточна сторінка
-
-    // Функція для рендерингу карток
-    function renderCards(page) {
-        const startIndex = (page - 1) * cardsPerPage;
-        const endIndex = startIndex + cardsPerPage;
-        const cardsToShow = animals.slice(startIndex, endIndex);
-    
-        $(".card-grid").empty(); // Очищаємо контейнер карток
-    
-        cardsToShow.forEach((animal) => {
-            $(".card-grid").append(`
-                <div class="card">
-                    <div class="card-top">
-                        <img src="${animal.image}" alt="${animal.name}" style="width: 100%; height: auto; border-radius: 10px;">
-                    </div>
-                    <div class="card-bottom">
-                        <h3>${animal.name}</h3>
-                        <p>${animal.gender} | <span>${animal.age}</span></p>
-                        <button class="details-btn" data-id="${animal.id}">Більше...</button>
-                        <div class="like-btn" onclick="toggleLike(this)">
-                            <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#FF7A00" stroke-width="2" viewBox="0 0 24 24">
-                                <path d="M12 21s-6.5-4.58-10-9.33C.9 8.07 2.85 4.5 6 4.5c1.91 0 3.64 1.17 4.5 2.89C11.86 5.67 13.59 4.5 15.5 4.5c3.15 0 5.1 3.57 4 7.17C18.5 16.42 12 21 12 21z"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            `);
-        });
-    }
-
-    // Функція для оновлення стану пагінації
-    function updatePagination() {
-        $(".page-btn").removeClass("active");
-        $(`.page-btn[data-page="${currentPage}"]`).addClass("active");
-
-        // Деактивація кнопки "Далі" на останній сторінці
-        if (currentPage === totalPages) {
-            $(".next-btn").prop("disabled", true);
-        } else {
-            $(".next-btn").prop("disabled", false);
-        }
-    }
-
-    // Функція для скролу вгору
-    function scrollToTop() {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-    }
-
-    // Ініціалізація
-    function initPagination() {
-        renderCards(currentPage);
-        updatePagination();
-    }
-
-    // Обробник кліку на кнопки сторінок
-    $(".pagination").on("click", ".page-btn", function () {
-        currentPage = parseInt($(this).data("page"));
-        renderCards(currentPage);
-        updatePagination();
-        scrollToTop(); // Додаємо скрол вгору
+    $(".Btn_Help").on("click", function () {
+        window.location.href = "help.html"; // Перенаправлення на сторінку help.html
     });
-
-    // Обробник кліку на кнопку "Далі"
-    $(".pagination").on("click", ".next-btn", function () {
-        if (currentPage < totalPages) {
-            currentPage++;
-            renderCards(currentPage);
-            updatePagination();
-            scrollToTop(); // Додаємо скрол вгору
-        }
-    });
-
-    // Ініціалізація
-    initPagination();
-});
-$(".card-grid").on("click", ".details-btn", function () {
-    const animalId = $(this).data("id"); // Отримуємо ID тварини
-    window.location.href = `details.html?id=${animalId}`; // Перенаправляємо на сторінку details.html
-});
-$('#search-pet-btn').on("click", function(){
-    $('#search-pet-input').val('');
-    alert('Функція пошуку поки що не реалізована!');
-
 });

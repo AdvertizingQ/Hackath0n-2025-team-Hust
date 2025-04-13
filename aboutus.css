@@ -1,11 +1,13 @@
 /* Styles for the "Про нас" section */
 .about-us {
+  width: 100%;
     padding-top: 22px;
     padding: 100px;
     background-color: #fff; /* Світлий фон для секції */
     text-align: center;
     gap : 0px;
     font-family: "Inter", sans-serif;
+
   }
   
   .about-us h2 {
@@ -30,7 +32,8 @@
     padding: 20px;
     color: #fff; /* Білий текст */
     width: 440px; /* Фіксована ширина */
-    height: 445px; /* Фіксована висота */
+    height: 442px; /* Фіксована висота */
+   /* Фіксована висота */
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легка тінь */
     display: flex;
@@ -66,9 +69,14 @@
     font-family: "Inter", sans-serif;
   }
   
+.orange1{
+  color: rgba(254, 165, 64, 1);
+}
+
   .team-btn:hover {
-    background-color: #e5673e;
+    background-color: #e5683e00;
     color: #fff;
+    border: 2px solid #fff;
   }
   
   .about-image {
@@ -92,4 +100,36 @@
   /* Стиль для оранжевого тексту */
   .orange {
     color: #FEA540; /* Оранжевий колір */
+  }
+
+  @media(max-width: 1300px){
+    .about-text{
+      width: 100%;
+      height: 100%
+    }
+    .about-image{
+      display: none;
+    }
+
+    .about-us-content{
+      width: 100%;
+      flex-wrap: nowrap;
+      margin-bottom: 60px;
+    }
+    .about-us{
+      width: 100%;
+      justify-content: start;
+      padding: 0;
+    }  
+
+  }
+
+
+  @media(max-width: 600px){
+    .about-text h1 {
+      font-size: 20px;
+    }  
+    .about-text p{
+      font-size: 15px;
+    }
   }

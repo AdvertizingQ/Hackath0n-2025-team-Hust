@@ -86,14 +86,14 @@ body {
     font-family: "Inter", sans-serif;
   }
   .clinic-bottom button:hover {
-    background-color: #e5673e;
+    background-color: #e5683e00;
     color: #fff;
-    font-family: "Inter", sans-serif;
-  }
+    border: 2px solid #fff;}
   
   .clinic-right {
     flex: 2;
     width: 50%;
+    height: 10  0vh;
     font-family: "Inter", sans-serif;
   }
   
@@ -105,16 +105,28 @@ body {
   }
   
   /* Адаптивність */
-  @media (max-width: 768px) {
+  @media (max-width: 940px) {
     .clinic-wrapper {
       flex-direction: column;
     }
-  
-    .clinic-left,
-    .clinic-right {
+
+    .clinic-top{
+      width: 100%;
+      text-align: center;
+    }
+
+.clinic-bottom{
+  width: 100%;
+  text-align: center;
+}
+
+    .clinic-left {
       width: 100%;
     }
-  
+
+    .clinic-right {
+     display: none;
+    }
     .clinic-bottom button {
       align-self: center;
     }

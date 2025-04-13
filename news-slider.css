@@ -56,7 +56,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center; /* центрує по вертикалі */
-    height: 100%; /* дозволяє тягнутись у висоту слайда */
+     /* дозволяє тягнутись у висоту слайда */
   }
   .news-text h2 {
     color: #fff;
@@ -106,3 +106,208 @@
     right: -60px;
     font-family: "Inter", sans-serif;
   }
+
+  /* @media(max-width: 800px){
+    .news-slide-content{
+      flex-direction: column;
+    }
+    .news-img{
+      width: 100%;
+    }
+    .news-text{
+      width: 100%;
+    }
+  } */
+
+  @media (max-width: 800px) {
+    .news-slide-content {
+        flex-direction: column; /* Розташування блоків вертикально */
+        height: auto; /* Автоматична висота */
+    }
+
+    .news-img {
+        width: 100%; /* Зображення займає всю ширину */
+        height: 200px; /* Фіксована висота для зображення */
+    }
+
+    .news-text {
+        width: 100%; /* Текст займає всю ширину */
+        padding: 20px; /* Зменшено внутрішні відступи */
+    }
+
+    .news-arrow.left {
+        left: 10px; /* Зменшено відступ для стрілок */
+    }
+
+    .news-arrow.right {
+        right: 10px; /* Зменшено відступ для стрілок */
+    }
+}
+
+/* Основні стилі для секції новин */
+.news-slider-section {
+  max-width: 1150px;
+  margin: 80px auto;
+  padding: 0 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.news-slider-section .title {
+  margin-bottom: 80px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.news-slider-section .title span {
+  color: #FEA540;
+}
+
+.news-slider {
+  position: relative;
+  overflow: hidden; /* Ховає зайвий контент */
+}
+
+.news-slide {
+  display: none;
+}
+
+.news-slide.active {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.news-slide-content {
+  height: 460px;
+  display: flex;
+  flex-direction: row;
+}
+
+.news-img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.news-text {
+  background: #FEA54080;
+  padding: 40px;
+  width: 50%;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-text h2 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.news-date {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.news-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  background: #FEA54080;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 28px;
+  z-index: 1;
+  transition: all ease 0.3s;
+}
+
+.news-arrow:hover {
+  background-color: #fff;
+  color: #FEA540;
+  border: 2px solid #FEA540;
+}
+
+.news-arrow.left {
+  left: -60px;
+}
+
+.news-arrow.right {
+  right: -60px;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 800px) {
+  .news-slide-content {
+      flex-direction: column; /* Розташування блоків вертикально */
+      height: auto; /* Автоматична висота */
+  }
+
+  .news-img {
+      width: 100%; /* Зображення займає всю ширину */
+      height: 200px; /* Фіксована висота для зображення */
+  }
+
+  .news-text {
+      width: 100%; /* Текст займає всю ширину */
+      padding: 20px; /* Зменшено внутрішні відступи */
+  }
+
+  .news-arrow.left {
+      left: 10px; /* Зменшено відступ для стрілок */
+  }
+
+  .news-arrow.right {
+      right: 10px; /* Зменшено відступ для стрілок */
+  }
+  .news-arrow{
+    top: 20%;
+  }
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 480px) {
+  .news-slide-content {
+      flex-direction: column;
+      height: auto;
+  }
+
+  .news-img {
+      width: 100%;
+      height: 150px; /* Ще менша висота для мобільних */
+  }
+
+  .news-text {
+      width: 100%;
+      padding: 15px;
+  }
+
+  .news-text h2 {
+      font-size: 1.2rem; /* Зменшено розмір заголовка */
+  }
+
+  .news-text p {
+      font-size: 0.9rem; /* Зменшено розмір тексту */
+  }
+
+  .news-arrow {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      line-height: 40px;
+  }
+
+  .news-arrow.left {
+      left: 5px;
+  }
+
+  .news-arrow.right {
+      right: 5px;
+  }
+}

@@ -127,7 +127,10 @@
 .bcg-color2{
     background-color: #D9D9D9;
 }
-
+.no-scroll {
+    overflow: hidden; /* Забороняє прокрутку */
+    height: 100%; /* Фіксує висоту */
+}
 
 input {
     width: 420px;
@@ -189,7 +192,7 @@ input {
 .AdoptInfoBtn{
     width: 432px;
     height: 70px;
-    background-color: #000000;
+    background-color: #FEA540;
     border-radius: 10px;
     font-size: 20px;
     font-weight: 700;

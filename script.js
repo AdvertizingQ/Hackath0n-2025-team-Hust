@@ -112,10 +112,31 @@ $("#create-announcment-btn").on("click", function () {
   $('.body-content').addClass('blur'); // Додаємо ефект розмиття
 
 });
-$("#burgerMenu").on("click", function () {
-  $("#mobileMenu").toggleClass("active"); // Перемикаємо клас "active" для мобільного меню
-  $("body").toggleClass("no-scroll"); // Забороняємо або дозволяємо прокрутку
-});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const burgerMenu = document.getElementById("burgerMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenuBtn = document.getElementById("closeMenuBtn");
+
+  // Відкриття/закриття бургер-меню
+  burgerMenu.addEventListener("click", () => {
+      burgerMenu.classList.toggle("active");
+      mobileMenu.classList.toggle("active");
+  });
+
+  // Закриття меню при натисканні на кнопку "Закрити"
+  closeMenuBtn.addEventListener("click", () => {
+      burgerMenu.classList.remove("active");
+      mobileMenu.classList.remove("active");
+  });
+}); 
+
+
+
+
+
 // Відкрити попап для реєстрації/входу
 $("#mobileAuthBtn").on("click", function () {
   $("#popup1").css("display", "flex"); // Показуємо попап реєстрації/входу
@@ -123,10 +144,10 @@ $("#mobileAuthBtn").on("click", function () {
   $("#mobileMenu").removeClass("active"); // Закриваємо мобільне меню
 });
 
+
+
 // Змінити мову
-$("#mobileLanguageBtn").on("click", function () {
-  alert("Функція зміни мови поки що не реалізована!");
-});
+
 $("#sendBtn").on("click", function () {
   $("#popup5").css("display", "none"); // Ховаємо popup5
   $(".popup-content").removeClass("bcg-color"); // Видаляємо клас для стилізації

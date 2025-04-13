@@ -3,70 +3,81 @@ const users = []; // Array to store user data
 $('#btnSignIn').on('click', function () {
   $('#popup1').css('display', 'flex'); // Show the pop-up
   $('.body-content').addClass('blur'); // Add blur to the background
-  });
-  
-  $('.close-popup-btn').on('click', closePopup); // Close pop-up when clicking the close button
-  
-  $('#signInBtn').on('click', function () {
+  $('body').addClass('no-scroll'); // Забороняємо прокрутку
+});
+
+$('.close-popup-btn').on('click', closePopup); // Close pop-up when clicking the close button
+
+$('#signInBtn').on('click', function () {
   $('#popup2').css('display', 'flex'); // Show the pop-up
   $('.body-content').addClass('blur'); // Add blur to the background
   $('#popup1').css('display', 'none');
   $('.popup-content').addClass('bcg-color');
-  });
-  
-  $('#logInBtn').on('click', function (){
+  $('body').addClass('no-scroll'); // Забороняємо прокрутку
+});
+
+$('#logInBtn').on('click', function () {
   $('#popup3').css('display', 'flex'); // Показуємо попап
   $('.body-content').addClass('blur'); // Додаємо ефект розмиття
   $('#popup1').css('display', 'none');
   $('.popup-content').addClass('bcg-color2');
-  })
-  
-  $('#registerBtn').on('click', function () {
+  $('body').addClass('no-scroll'); // Забороняємо прокрутку
+});
+
+$('#registerBtn').on('click', function () {
   const name = $('#name1').val();
   const email = $('#email1').val();
   const password = $('#password1').val();
   if (name && email && password) {
-  users.push({ name, email, password });
-  $('#name').val('');
-  $('#email').val('');
-  $('#password').val('');
-  closePopup();
-  alert('Ви успішно зареєстровані!');
+    users.push({ name, email, password });
+    $('#name1').val('');
+    $('#email1').val('');
+    $('#password1').val('');
+    closePopup();
+    alert('Ви успішно зареєстровані!');
   } else {
-  alert('Будь ласка, заповніть усі поля!');
+    alert('Будь ласка, заповніть усі поля!');
   }
-  });
-  $('#loginBtn').on('click', function () {
+});
+
+$('#loginBtn').on('click', function () {
   const email = $('#email2').val();
   const password = $('#password2').val();
   const user = users.find(user => user.email === email && user.password === password);
   if (user) {
-  closePopup();
-  alert(`Ласкаво просимо, ${user.name} !`);
+    closePopup();
+    alert(`Ласкаво просимо, ${user.name} !`);
   } else {
-  alert('Неправильний логін або пароль!');
+    alert('Неправильний логін або пароль!');
   }
-  });
-  
-  function closePopup() {
+});
+
+function closePopup() {
   $('.popup').css('display', 'none'); // Ховаємо pop-up
   $('.body-content').removeClass('blur'); // Знімаємо ефект розмиття
   $('.popup-content').removeClass('bcg-color');
   $('.popup-content').removeClass('bcg-color2');
-  };
-  $(".Btn_Adopt").on("click", function () {
-    $("#popup4").css("display", "flex"); // Показуємо popup4
-    $(".popup-content").addClass("bcg-color2"); // Додаємо клас для стилізації
+  $('body').removeClass('no-scroll'); // Дозволяємо прокрутку
+}
+
+$(".Btn_Adopt").on("click", function () {
+  $("#popup4").css("display", "flex"); // Показуємо popup4
+  $(".popup-content").addClass("bcg-color2"); // Додаємо клас для стилізації
+  $('body').addClass('no-scroll'); // Забороняємо прокрутку
 });
+
 $(".AdoptInfoBtn").on("click", function () {
-    $("#popup4").css("display", "none"); // Ховаємо popup4
-    $(".popup-content").removeClass("bcg-color2"); // Видаляємо клас для стилізації
-    $("#name3").val(""); // Очищаємо поле вводу
-    $("#email3").val(""); // Очищаємо поле вводу
-    $("#phoneNumber").val(''); // Очищаємо поле вводу
-    $("#message").val(""); // Очищаємо поле вводу
+  $("#popup4").css("display", "none"); // Ховаємо popup4
+  $(".popup-content").removeClass("bcg-color2"); // Видаляємо клас для стилізації
+  $("#name3").val(""); // Очищаємо поле вводу
+  $("#email3").val(""); // Очищаємо поле вводу
+  $("#phoneNumber").val(''); // Очищаємо поле вводу
+  $("#message").val(""); // Очищаємо поле вводу
+  $('body').removeClass('no-scroll'); // Дозволяємо прокрутку
 });
+
 $(".register_btn").on("click", function () {
   $("#popup4").css("display", "flex"); // Показуємо popup4
-    $(".popup-content").addClass("bcg-color2"); // Додаємо клас для стилізації
+  $(".popup-content").addClass("bcg-color2"); // Додаємо клас для стилізації
+  $('body').addClass('no-scroll'); // Забороняємо прокрутку
 });

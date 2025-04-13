@@ -127,7 +127,10 @@
 .bcg-color2{
     background-color: #D9D9D9;
 }
-
+.no-scroll {
+    overflow: hidden; /* Забороняє прокрутку */
+    height: 100%; /* Фіксує висоту */
+}
 
 input {
     width: 420px;

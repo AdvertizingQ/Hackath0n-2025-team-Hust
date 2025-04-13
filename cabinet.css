@@ -1,0 +1,30 @@
+.phantom-header{
+    width: 100%;
+    height: 15vh;
+}
+.cabinet{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cabinet-header-row{
+    width: 100%;
+    height: 40vh;
+    background-color:aqua ;
+    display: flex;
+}
+.cabinet-blockirator{
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+.profile-photo-section{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #861f1f;
+}
